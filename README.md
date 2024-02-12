@@ -8,6 +8,11 @@
 
 ## Modelos de Entidad Relacional
 
-![Diagrama de Entidad Relacional](./public/2024-02-12 17 20 39.png)
+<strong>Diagrama de Entidad Relacional</strong>
+<img src="./public/2024-02-12 17 20 39.png"/>
 
-Diagrama de entidad relacional del usuario, flujo de datos para realizar el correspondiente donativo.
+<i>Diagrama de entidad relacional del usuario</i>
+<br/>
+
+<p>flujo de datos para realizar el correspondiente donativo.</p>
+
