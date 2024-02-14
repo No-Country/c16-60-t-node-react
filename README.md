@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# App de donaciones para catástrofes
 
-## Getting Started
+## Documentación
 
-First, run the development server:
+-   Clona el repositorio de GitHub utilizando el comando `git clone --URL`
+-   Instala los paquetes de Node con el comando `npm install`
+-   Ejecuta el comando `npm start`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Modelos de Entidad Relacional
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<strong>Diagrama de Entidad Relacional</strong>
+<img src="resources/diagrama.png"/>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<i>Diagrama de entidad relacional del usuario</i>
+<br/>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p>flujo de datos para realizar el correspondiente donativo.</p>
 
-## Learn More
+## Prisma se está utilizando como ORM , sus comandos son
 
-To learn more about Next.js, take a look at the following resources:
+-   [Prisma](https://prisma.io)
+-   Instalacion de Prisma `npm install prisma --save-dev`
+-   Inicializar Prisma `npx prisma init --datasource-provider PostgreSQL`
+-   Crear el Schema de Prisma
+-   Crear el Cliente de Prisma
+-   Si ya se tiene una base de datos puede usarse el comando `npm prisma db pull` para crear el Schema basado en ella
+-   Ejecutar el comando para la migracion `npm prisma migrate dev --name nombreMigra`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## VARIABLES DE ENTORNO
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   `DATABASE_URL`: URL de la base de datos
+-   `NODE_ENV`: `development` o `production`
