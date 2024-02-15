@@ -17,3 +17,21 @@ model Notice {
     published   Boolean  @default(false)
     createdAt   DateTime @default(now())
 }
+
+// las donaciones tendran una causa asignada
+model Causes {
+    id          Int         @id @default(autoincrement())
+    title       String
+    description String
+    createdAt   DateTime    @default(now())
+    Donations   Donations[]
+}
+
+model Donations {
+    id          Int      @id @default(autoincrement())
+    title       String
+    description String
+    createdAt   DateTime @default(now())
+    Cause       Causes   @relation(fields: [causesId], references: [id])
+    causesId    Int
+}
