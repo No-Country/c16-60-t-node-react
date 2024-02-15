@@ -1,4 +1,4 @@
-# App de donaciones para catástrofes
+# SMART HELP
 
 ## Documentación
 
