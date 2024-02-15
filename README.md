@@ -22,7 +22,7 @@
 -   Instalacion de Prisma `npm install prisma --save-dev`
 -   Inicializar Prisma `npx prisma init --datasource-provider PostgreSQL`
 -   Crear el Schema de Prisma
--   Crear el Cliente de Prisma
+-   Crear el Cliente de Prisma `npx prisma generate`
 -   Si ya se tiene una base de datos puede usarse el comando `npm prisma db pull` para crear el Schema basado en ella
 -   Ejecutar el comando para la migracion `npm prisma migrate dev --name nombreMigra`
 
@@ -30,16 +30,12 @@
 
 -   `DATABASE_URL`: URL de la base de datos
 -   `NODE_ENV`: `development` o `production`
--   
-=======
+
 ## Imagen de Docker para la BDD PostgreSQL
 
-- Instalar Docker, en widows y mac, por defecto viene instalado Docker compose
-- Agregar un archivo .env en la raiz del proyecto
-- Agregar las siguientes variables de entorno:
-    -`POSTGRES_DB=smarthelp_bd
-      POSTGRES_USER=smart_help
-      POSTGRES_PASSWORD=password123`
-- Ejecuta el comando `docker-compose up`, y se inicializara una imagen de postgres con la BDD ya creada.
-
-
+-   Instalar Docker, en widows y mac, por defecto viene instalado Docker compose
+-   Agregar un archivo .env en la raiz del proyecto
+-   Agregar las siguientes variables de entorno: -`POSTGRES_DB=smarthelp_bd
+POSTGRES_USER=smart_help
+POSTGRES_PASSWORD=password123`
+-   Ejecuta el comando `docker-compose up`, y se inicializara una imagen de postgres con la BDD ya creada.
