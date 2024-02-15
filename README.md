@@ -30,3 +30,16 @@
 
 -   `DATABASE_URL`: URL de la base de datos
 -   `NODE_ENV`: `development` o `production`
+-   
+=======
+## Imagen de Docker para la BDD PostgreSQL
+
+- Instalar Docker, en widows y mac, por defecto viene instalado Docker compose
+- Agregar un archivo .env en la raiz del proyecto
+- Agregar las siguientes variables de entorno:
+    -`POSTGRES_DB=smarthelp_bd
+      POSTGRES_USER=smart_help
+      POSTGRES_PASSWORD=password123`
+- Ejecuta el comando `docker-compose up`, y se inicializara una imagen de postgres con la BDD ya creada.
+
+
