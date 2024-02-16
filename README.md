@@ -39,3 +39,16 @@
 POSTGRES_USER=smart_help
 POSTGRES_PASSWORD=password123`
 -   Ejecuta el comando `docker-compose up`, y se inicializara una imagen de postgres con la BDD ya creada.
+
+## Credenciales Clerk
+
+-   Credenciales de la aplicacion `clerk`
+-   Agregar las Variables de entorno al archivo .env
+-   `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+-   `CLERK_SECRET_KEY`
+
+## Como arrancar el proyecto
+
+-   Clonar el archivo .env.example y renombrarlo como .env
+-   Agregar variables de entorno
+-   Agregar las variables de Clerk
