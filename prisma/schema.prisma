@@ -16,9 +16,10 @@ model Notice {
     description String
     published   Boolean  @default(false)
     createdAt   DateTime @default(now())
+    image       String
 }
 
-// las donaciones tendran una causa asignada
+// las donaciones tendran una causa asignada Todo:Agregar las donaciones
 model Causes {
     id          Int         @id @default(autoincrement())
     title       String
