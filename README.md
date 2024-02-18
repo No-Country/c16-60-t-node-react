@@ -52,3 +52,7 @@ POSTGRES_PASSWORD=password123`
 -   Clonar el archivo .env.example y renombrarlo como .env
 -   Agregar variables de entorno
 -   Agregar las variables de Clerk
+-   Comprobar la Base de datos
+-   Levantar contenedor de docker en caso de ser necesario
+-   Ejecutar el comando `npm run seed` para cargar la data en la base de datos
+-   Ejecutar el comando `npm run dev` para iniciar el servidor
