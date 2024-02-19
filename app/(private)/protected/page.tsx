@@ -1,4 +1,5 @@
 import { UserButton, auth, currentUser } from "@clerk/nextjs";
+import { causas } from "@/data/causas-data";
 
 export default async function Protected() {
     const user = await currentUser();
@@ -10,6 +11,18 @@ export default async function Protected() {
             <div>
                 User:{user?.firstName}
                 userId:{userId}
+            </div>
+            <div>
+                <ul>
+                {
+                    causas.map((causa)=>
+                    <>
+                        <li key={causa.id}>
+                            <h4>Causa: {causa.title}</h4>
+                            <p>{causa.description}</p>
+                        </li>
+                    </>)
+                }</ul>
             </div>
         </div>
     );
