@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "seed": "ts-node ./seed/noticias-seed.ts"
+        "seed": "ts-node ./seed/seed.ts"
     },
     "dependencies": {
         "@clerk/nextjs": "^4.29.7",
