@@ -19,13 +19,12 @@ model Notice {
     image       String
 }
 
-// las donaciones tendran una causa asignada Todo:Agregar las donaciones
 model Causes {
     id          Int         @id @default(autoincrement())
     title       String
     description String
     createdAt   DateTime    @default(now())
-    Donations   Donations[]
+    Donations   Donations[] 
 }
 
 model Donations {
@@ -33,6 +32,7 @@ model Donations {
     title       String
     description String
     createdAt   DateTime @default(now())
-    Cause       Causes   @relation(fields: [causesId], references: [id])
+    Cause       Causes?   @relation(fields: [causesId], references: [id])
     causesId    Int
 }
+// las donaciones tendran una causa asignada Todo:Agregar las donaciones
