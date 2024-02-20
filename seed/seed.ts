@@ -21,7 +21,7 @@ export async function Seed() {
   // await prisma.donations.createMany({
   //     data:donations
   // })
-
+  //
   // TODO: Agregar la de productos
   // TODO: Agregar server actions
   // TODO: Integrar MercadoPago o Paypal

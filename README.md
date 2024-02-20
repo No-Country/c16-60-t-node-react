@@ -56,3 +56,5 @@ POSTGRES_PASSWORD=password123`
 -   Levantar contenedor de docker en caso de ser necesario
 -   Ejecutar el comando `npm run seed` para cargar la data en la base de datos
 -   Ejecutar el comando `npm run dev` para iniciar el servidor
+
+## probando Pull Request pablo/cristian.
