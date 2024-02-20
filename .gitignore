@@ -41,3 +41,6 @@ next-env.d.ts
 .env
 /pgdata
 pgdata/
+
+# local de dev Cristian Vazquez
+TODO.md
