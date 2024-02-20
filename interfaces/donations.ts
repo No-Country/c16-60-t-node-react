@@ -5,6 +5,6 @@ export interface DonationsData {
   title: string;
   description: string;
   createdAt: Date;
-  causesId?: number;
+  causesId: number;
 }
 
