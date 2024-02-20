@@ -1,44 +1,43 @@
-"use client";
+import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Button from "./Button";
+import Logo from "./Logo";
 
-// Este es un navegador de ejemplo, eliminar cuando el Navbar original este completo
-export function Navbar() {
+const Navbar = () => {
   return (
-    <nav className='bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex items-center justify-between h-16'>
-          <div className='flex-shrink-0 text-cyan-200'>
-            <Link href='/'>
-              <div className='ml-11'>
-                <Image
-                  src={"/logo-secondary.svg"}
-                  width={150}
-                  height={150}
-                  alt={"logo"}></Image>
-              </div>
-            </Link>
-          </div>
-          <div className='flex items-center space-x-4 text-cyan-200'>
-            <Button variant='ghost' className="text-black font-semibold text-lg">
-              <Link href='/'>Nosotros</Link>
-            </Button>
-            <Button variant='ghost' className="text-black font-semibold text-lg">
-              <Link href='/noticias'>Noticias</Link>
-            </Button>
-            <Button variant='purple' className="font-semibold text-lg">
-              <Image
-                src={"/img-ingresar.png"}
-                width={22}
-                height={22}
-                alt={"logo"}
-                className="pr-2"></Image>
-              <Link href='/'>Ingresar</Link>
-            </Button>
-          </div>
-        </div>
+    <nav className='flex  justify-between container pt-5 '>
+      {/* Logo */}
+      <Logo />
+
+      {/*Links*/}
+      <ul className=' gap-12 hidden lg:flex items-end'>
+        {NAV_LINKS.map((link) => (
+          <Link
+            href={link.href}
+            key={link.key}
+            className='hover:text-violet-500 transition-all'>
+            {link.label}
+          </Link>
+        ))}
+      </ul>
+
+      {/*Remplazar por el boton correspondente de la carpeta components*/}
+      {/* Button */}
+      <div className='hidden lg:flex'>
+        <Button
+          type='button'
+          title='Ingresar'
+          icon='ingresar.svg'
+          variant='btn_dark_violet'
+        />
+      </div>
+
+      <div className='flex lg:hidden'>
+        <Image src={"menu.svg"} alt='' width={25} height={25} />
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

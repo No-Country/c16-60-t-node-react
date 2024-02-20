@@ -1,5 +1,5 @@
 import { noticias } from "@/data/noticias-data";
-import { NoticiasCard } from "../_components/NoticiasCard";
+import { NoticiasCard } from "./_components/NoticiasCard";
 
 const NoticiasPage = () => {
     return (
