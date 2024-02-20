@@ -17,7 +17,16 @@ export async function Seed() {
     data: causas,
   });
 
-  
+  // Todo: Descomentar una vez lista las donaciones
+  // await prisma.donations.createMany({
+  //     data:donations
+  // })
+
+  // TODO: Agregar la de productos
+  // TODO: Agregar server actions
+  // TODO: Integrar MercadoPago o Paypal
+  // TODO: Agregar Schema de prisma para productos
+  // TODO: Integrar el uso de Zustand como gestor de estado o Cookies dependiendo de tiempo y necesidades
 
   console.log("Seed ... Agregado correctamente");
 }
