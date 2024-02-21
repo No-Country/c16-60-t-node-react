@@ -1,6 +1,6 @@
 import { causas } from "../data/causas-data";
-import { noticias } from "../data/noticias-data";
 import { donations } from "../data/donations-data";
+import { noticias } from "../data/noticias-data";
 import prisma from "../lib/db";
 
 export async function Seed() {
