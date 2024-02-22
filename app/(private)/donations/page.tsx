@@ -1,4 +1,10 @@
+import { FormDonation } from "./_components/formDonation";
+
 const DonationsPage = () => {
-  return <div>DonationsPage</div>;
+  return (
+    <div>
+      <FormDonation />
+    </div>
+  );
 };
 export default DonationsPage;

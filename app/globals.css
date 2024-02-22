@@ -13,24 +13,6 @@ body,
   --fourth: white;
 }
 
-/* Parte de pablo de la homepage */
-
-.container {
-  width: 90%;
-  margin: auto;
-}
-
-
-.prefab-cabin-img{
-  background-image: url("/prefab-cabin.jpg");
-  background-size: cover;
-}
-
-.student-img{
-  background-image: url("/student.jpg");
-  background-size: cover;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
