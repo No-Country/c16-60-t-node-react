@@ -28,24 +28,6 @@ const Navbar = () => {
           <Image src={"ingresar.svg"} alt="logo" width={25} height={25} />
         </Button>
       </div>
-      {/* 
-      <div className="flex bg-red-200 w-16  lg:hidden">
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-            <Menu className="w-16" />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-gray-200 border border-gray-200">
-            <DropdownMenuItem>Nosotros</DropdownMenuItem>
-            <DropdownMenuItem>Noticias</DropdownMenuItem>
-            <DropdownMenuItem>Testimonios</DropdownMenuItem>
-            <DropdownMenuItem className="bg-violet-600 text-white flex justify-center gap-3">
-              <span>Ingresar</span>
-              <Image src={"ingresar.svg"} alt="logo" width={25} height={25} />
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div> */}
-
       <div className="lg:hidden">
         <Menu className="w-16" />
         <MobileMenu />
