@@ -1,4 +1,12 @@
+import Home from "./_components/sections/Home";
+import AboutUs from "./_components/sections/About-Us";
+
 const HomePage = () => {
-  return <div>HomePagePablo</div>;
+  return (
+    <>
+      <Home />
+      <AboutUs/>
+    </>
+  );
 };
 export default HomePage;

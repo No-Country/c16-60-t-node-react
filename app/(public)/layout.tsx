@@ -1,16 +1,16 @@
-import { Navbar } from "./_components/Navbar";
+import Footer from "./_components/layout/Footer";
+import  Navbar  from "./_components/layout/Navbar";
 
 export const metadata = {
-    title: "SEO Title",
-    description: "SEO Title",
+    title: "Smart Help",
+    description: "Home",
 };
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
     return (
         <div>
             <Navbar />
-            {/*Navbar*/}
-            <div className="max-w-7xl mx-auto">{children}</div>
-            {/* Footer */}
+                <div>{children}</div>
+            <Footer />
         </div>
     );
 }
