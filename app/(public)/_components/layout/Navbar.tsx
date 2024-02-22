@@ -15,9 +15,9 @@ const Navbar = () => {
       <div className=" hidden lg:flex items-center gap-4 ">
         {/*Links*/}
         <ul className="space-x-4  lg:flex items-end">
-          {NAV_LINKS.map((link) => (
-            <Link href={link.href} key={link.key} className="hover:text-violet-500 transition-all">
-              {link.label}
+          {NAV_LINKS.map(({ href, key, label }) => (
+            <Link href={href} key={key} className="hover:text-violet-500 transition-all">
+              {label}
             </Link>
           ))}
         </ul>

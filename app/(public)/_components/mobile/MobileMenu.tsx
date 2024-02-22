@@ -13,7 +13,7 @@ export const MobileMenu = () => {
           <ul className="space-y-2 flex flex-col items-start *:py-1 *:px-4">
             <li>Nosotros</li>
             <li>Noticias</li>
-            <li>Testimonios</li>
+            <li>Contactos</li>
           </ul>
           <div className="bg-violet-500 text-white flex  items-center py-2 px-6 rounded-md">
             <span>Ingresar</span>
