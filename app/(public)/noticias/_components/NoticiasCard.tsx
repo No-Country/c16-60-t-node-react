@@ -16,18 +16,12 @@ export const NoticiasCard = ({
   link: string;
 }) => {
   return (
-    <div className='mt-4 mb-4 sm:p-4'>
-      <Image
-        src={imagen}
-        width={"500"}
-        height={"500"}
-        alt={nombreImagen}></Image>
-      <h1 className='text-xl mt-3 font-bold'>{titulo}</h1>
-      <p className='text-base mt-3 mb-5 font-normal  leading-tight'>
-        {descripcion}
-      </p>
-      <Button variant='purple'>
-        <Link className='text-base font-medium' href={link}>
+    <div className="mt-4 mb-4 sm:p-4">
+      <Image src={imagen} width={"500"} height={"500"} alt={nombreImagen}></Image>
+      <h1 className="text-xl mt-3 font-bold text-justify min-h-28">{titulo}</h1>
+      <p className="text-base mt-3  font-normal text-justify min-h-28 leading-tight">{descripcion}</p>
+      <Button variant="purple">
+        <Link className="text-base font-medium" href={link}>
           Leer mas
         </Link>
       </Button>
