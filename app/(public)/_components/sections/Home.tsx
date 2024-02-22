@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section className=" flex gap-9  flex-col lg:flex-row items-center py-10 xl:pt-16">
       <div className="flex flex-col justify-center gap-2 flex-1 pr-9  ">
-        <h1 className="text-5xl lg:text-6xl text-gray-800 font-extrabold text-center text-wrap lg:text-left">
+        <h1 className="text-5xl lg:text-6xl lg:pb-4 text-gray-800 font-extrabold text-center text-wrap lg:text-left">
           Smart Help: donaciones que <span className="text-violet-700">impactan</span>.
         </h1>
         <p className="text-gray-600 text-base xl:text-lg  text-wrap">

@@ -13,7 +13,7 @@ const AboutUs = () => {
             <h2 className=" text-4xl lg:text-5xl pb-5 text-violet-700 font-extrabold text-wrap">
               Viviendas Prefabricadas <span className="text-gray-800">para Familias Afectadas</span>
             </h2>
-            <p className="text-gray-600 text-base xl:text-xl text-wrap">
+            <p className="text-gray-600 lg:pt-4 text-base xl:text-xl text-wrap">
               En situaciones de desastres naturales, las casas prefabricadas se convierten en una
               solución clave para brindar refugio rápido y seguro a las familias afectadas. Estas
               estructuras, construidas con materiales resistentes y ensambladas de manera rápida, ofrecen
@@ -37,7 +37,7 @@ const AboutUs = () => {
             <h2 className=" text-4xl lg:text-5xl pb-5 text-gray-800 font-extrabold text-wrap">
               Iniciativa de <span className="text-violet-700">donación</span> de útiles escolares
             </h2>
-            <p className="text-gray-600 text-base xl:text-xl text-wrap">
+            <p className="text-gray-600 lg:pt-3 text-base xl:text-xl text-wrap">
               Entendemos la vital importancia de disponer de los recursos adecuados para el proceso de
               aprendizaje. Por ello, nos comprometemos a proporcionar herramientas fundamentales que
               contribuyan al desarrollo académico de cada estudiante. Desde lápices y cuadernos hasta
