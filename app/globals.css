@@ -14,45 +14,21 @@ body,
 }
 
 /* Parte de pablo de la homepage */
-.btn_dark_violet {
-  background-color: var(--first);
-  color: var(--fourth);
-  padding: 9px 16px;
-  border-radius: 10px;
-  gap: 9px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
-.bold-700 {
-  font-weight: 800;
-}
 
-.make-change-img {
-  background-image: url("/make.jpg");
+.prefab-cabin-img{
+  background-image: url("/prefab-cabin.jpg");
   background-size: cover;
-  border-radius: 20px;
-  background-position-x: -100px;
 }
 
-.about-us-img {
-  background-image: url("/office-2.jpg");
+.student-img{
+  background-image: url("/student.jpg");
   background-size: cover;
-  border-radius: 20px;
-  background-position-x: -100px;
-}
-
-.text-input-minimalist {
-  width: 210px;
-  text-align: center;
-  border-bottom: 1px solid var(--third);
-  outline: none;
 }
 
 @layer base {

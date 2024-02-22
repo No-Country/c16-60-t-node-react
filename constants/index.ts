@@ -47,35 +47,9 @@ export const FEATURES = [
 
 // FOOTER SECTION
 export const FOOTER_LINKS = [
-  {
-    title: 'Política y Términos',
-    links: [
-      'Política de privacidad',
-      'Términos y condiciones',
-      'Preguntas frecuentes (FAQ)',
-      
-    ],
-  },
-  {
-    title: 'Eventos y Reuniones',
-    links: ['Próximos Eventos', 'Reuniones Comunitarias', 'Nuestras Actividades'],
-  },
+    { title:  "Copyright", url: "/copyright"},
+    { title:  "Politica de privacidad", url: "/politica"},
+    { title:  "Contacto", url: "/contacto"},
 ];
 
-export const FOOTER_CONTACT_INFO = {
-  title: 'Contacto',
-  links: [
-    { label: 'Telefono', value: '123-456-7890' },
-    { label: 'Gmail', value: 'helpcenter@gmail.com' },
-  ],
-};
 
-export const SOCIALS = {
-  title: 'Social',
-  links: [
-    '/facebook.svg',
-    '/instagram.svg',
-    '/twitter.svg',
-    '/youtube.svg',
-  ],
-};
