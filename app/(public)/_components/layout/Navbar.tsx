@@ -8,7 +8,7 @@ import { MobileMenu } from "../mobile/MobileMenu";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center  justify-between  pt-7 ">
+    <nav className="flex items-center  justify-between max-w-screen-xl mx-auto  pt-7 ">
       {/* Logo */}
       <Logo />
 

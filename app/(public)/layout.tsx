@@ -7,10 +7,10 @@ export const metadata = {
 };
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="max-w-screen-xl mx-auto">
       <Navbar />
-      <div>{children}</div>
+      {children}
       <Footer />
-    </>
+    </div>
   );
 }
