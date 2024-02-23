@@ -24,7 +24,8 @@ model Causes {
     title       String
     description String
     createdAt   DateTime    @default(now())
-    Donations   Donations[] 
+    Donations   Donations[]
+    //    Products    Products[]
 }
 
 model Donations {
@@ -32,7 +33,19 @@ model Donations {
     title       String
     description String
     createdAt   DateTime @default(now())
-    Cause       Causes?   @relation(fields: [causesId], references: [id])
+    Cause       Causes?  @relation(fields: [causesId], references: [id])
     causesId    Int
 }
+
+//model Products {
+//    id       Int     @id @default(autoincrement())
+//    image    String
+//    name     String
+//    category String
+//    price    Float
+//    quantity Int
+//    Cause    Causes? @relation(fields: [causesId], references: [id])
+//    causesId Int
+//}
+
 // las donaciones tendran una causa asignada Todo:Agregar las donaciones
