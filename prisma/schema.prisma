@@ -1,22 +1,19 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Notice {
-    id          Int      @id @default(autoincrement())
-    title       String
-    description String
-    published   Boolean  @default(false)
-    createdAt   DateTime @default(now())
-    image       String
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  image       String
 }
 
 model Causes {
@@ -25,27 +22,26 @@ model Causes {
     description String
     createdAt   DateTime    @default(now())
     Donations   Donations[]
-    //    Products    Products[]
 }
 
 model Donations {
-    id          Int      @id @default(autoincrement())
-    title       String
-    description String
-    createdAt   DateTime @default(now())
-    Cause       Causes?  @relation(fields: [causesId], references: [id])
-    causesId    Int
+  id          Int      @id @default(autoincrement())
+  title       String
+  amount      Int
+  description String
+  createdAt   DateTime? @default(now())
+  causesId    Int
+  userId      String
+  Cause       Causes   @relation(fields: [causesId], references: [id])
 }
 
-//model Products {
-//    id       Int     @id @default(autoincrement())
-//    image    String
-//    name     String
-//    category String
-//    price    Float
-//    quantity Int
-//    Cause    Causes? @relation(fields: [causesId], references: [id])
-//    causesId Int
-//}
+model Products {
+   id       Int     @id @default(autoincrement())
+   image    String
+   name     String
+   category String
+   price    Int
+   quantity Int
+}
 
 // las donaciones tendran una causa asignada Todo:Agregar las donaciones
