@@ -20,12 +20,12 @@ export const NoticiasPopup = (noticia: NoticiaData) => {
       <DialogTrigger asChild>
         <Button variant="purple">Leer Más</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[1100px]">
+      <DialogContent className="overflow-auto h-screen sm:h-[90vh] sm:max-w-[1100px] ">
         <DialogHeader>
-          <DialogTitle className="text-left text-3xl sm:pr-6 sm:mb-2">{title}</DialogTitle>
+          <DialogTitle className="text-left text-3xl py-5 sm:pr-6 sm:mb-2">{title}</DialogTitle>
           <Separator />
         </DialogHeader>
-        <div className="flex flex-col-reverse gap-4 sm:flex-row">
+        <div className="flex flex-col-reverse gap-5 sm:py-3 sm:flex-row">
           <DialogDescription className="text-lg leading-relaxed font-normal w-full">
             {description}
           </DialogDescription>

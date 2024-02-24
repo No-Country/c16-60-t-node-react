@@ -6,7 +6,6 @@ html,
 body,
 :root {
   height: 100%;
-
   --first: rgb(113, 75, 148);
   --second: gray;
   --third: rgb(164, 128, 185);
