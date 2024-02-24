@@ -66,7 +66,7 @@ export const getAllDonations = async () => {
 
 // Productos
 
-// export const getAllProducts = async () => {
-//   const product = await prisma.product.findMany();
-//   return product;
-// };
+export const getAllProducts = async () => {
+  const product = await prisma.products.findMany();
+  return product;
+};

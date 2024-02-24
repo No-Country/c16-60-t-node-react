@@ -5,5 +5,4 @@ export interface ProductsData {
   category: string;
   price: number;
   quantity: number;
-  causeId: number;
 }
