@@ -1,38 +1,36 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Notice {
-    id          Int      @id @default(autoincrement())
-    title       String
-    description String
-    published   Boolean  @default(false)
-    createdAt   DateTime @default(now())
-    image       String
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  image       String
 }
 
 model Causes {
-    id          Int         @id @default(autoincrement())
-    title       String
-    description String
-    createdAt   DateTime    @default(now())
-    Donations   Donations[] 
+  id          Int         @id @default(autoincrement())
+  title       String
+  description String
+  createdAt   DateTime    @default(now())
+  Donations   Donations[]
 }
 
 model Donations {
-    id          Int      @id @default(autoincrement())
-    title       String
-    description String
-    createdAt   DateTime @default(now())
-    Cause       Causes?   @relation(fields: [causesId], references: [id])
-    causesId    Int
+  id          Int      @id @default(autoincrement())
+  title       String
+  amount      Int
+  description String
+  createdAt   DateTime? @default(now())
+  causesId    Int
+  userId      String
+  Cause       Causes   @relation(fields: [causesId], references: [id])
 }
-// las donaciones tendran una causa asignada Todo:Agregar las donaciones

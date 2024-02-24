@@ -63,3 +63,11 @@ POSTGRES_PASSWORD=password123`
 - Levantar contenedor de docker en caso de ser necesario
 - Ejecutar el comando `npm run seed` para cargar la data en la base de datos
 - Ejecutar el comando `npm run dev` para iniciar el servidor
+
+## Crear un Tunel para Mercado Pago
+
+- Primero instalar cloudflared
+- `winget install --id Cloudflare.cloudflared`
+- Actualizar Cloudflared `cloudflared update` como administrador
+- cloudflared tunnel --url http://localhost:3000
+- Agregar la URL a Webhook de Mercado Pago mas el /payment
