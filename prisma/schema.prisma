@@ -17,11 +17,11 @@ model Notice {
 }
 
 model Causes {
-  id          Int         @id @default(autoincrement())
-  title       String
-  description String
-  createdAt   DateTime    @default(now())
-  Donations   Donations[]
+    id          Int         @id @default(autoincrement())
+    title       String
+    description String
+    createdAt   DateTime    @default(now())
+    Donations   Donations[]
 }
 
 model Donations {
@@ -34,3 +34,14 @@ model Donations {
   userId      String
   Cause       Causes   @relation(fields: [causesId], references: [id])
 }
+
+model Products {
+   id       Int     @id @default(autoincrement())
+   image    String
+   name     String
+   category String
+   price    Int
+   quantity Int
+}
+
+// las donaciones tendran una causa asignada Todo:Agregar las donaciones
