@@ -69,5 +69,12 @@ POSTGRES_PASSWORD=password123`
 - Primero instalar cloudflared
 - `winget install --id Cloudflare.cloudflared`
 - Actualizar Cloudflared `cloudflared update` como administrador
-- cloudflared tunnel --url http://localhost:3000
-- Agregar la URL a Webhook de Mercado Pago mas el /payment
+- `cloudflared tunnel --url http://localhost:3000`
+- Agregar la URL a Webhook de Mercado Pago mas el url/payment
+
+## Solicitar clave de cuenta de google para nodemailer
+
+- https://security.google.com/settings/security/apppasswords
+- Envio de Email usando Nodemailer
+- EMAIL_USER=**\***@gmail.com
+- EMAIL_PASSWORD=**\*\*\*\***
