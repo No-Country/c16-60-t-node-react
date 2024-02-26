@@ -6,6 +6,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "via.placeholder.com",
       },
+      {
+        protocol: "https",
+        hostname: "static.wixstatic.com",
+      },
+      {
+        protocol: "https",
+        hostname: "http2.mlstatic.com",
+      },
     ],
   },
 };

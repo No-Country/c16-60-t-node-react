@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Button */}
         <Button variant="purple" className="lg:flex gap-2">
-          <span>Ingresar</span>
+          <Link href={"/sign-in"}>Ingresar</Link>
           <Image src={"ingresar.svg"} alt="logo" width={25} height={25} />
         </Button>
       </div>

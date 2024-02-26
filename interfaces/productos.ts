@@ -5,4 +5,5 @@ export interface ProductsData {
   category: string;
   price: number;
   quantity: number;
+  description?: string;
 }
