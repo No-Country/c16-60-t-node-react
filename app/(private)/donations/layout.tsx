@@ -3,5 +3,9 @@ export const metadata = {
   description: "Donaciones para las distintas causas",
 };
 export default function DonationLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <div className="bg-gray-300">
+      <div className="max-w-screen-xl mx-auto ">{children}</div>
+    </div>
+  );
 }
