@@ -8,7 +8,6 @@ const EmailPage = () => {
           method: "POST",
         });
         const data = await res.json();
-        console.log(data);
       }}
     >
       Enviar Email
