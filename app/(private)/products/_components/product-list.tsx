@@ -1,11 +1,13 @@
 "use client";
 import { ProductsData } from "@/interfaces/productos";
 import { useCategoryState } from "@/store/category-state";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import ProductCard from "./productcard";
 
 const ProductList = ({ products }: { products: ProductsData[] }) => {
   const [productState, setProductState] = useState<ProductsData[]>(products);
+  // Zustand
   const state = useCategoryState((state: any) => state.categories);
 
   useEffect(() => {
@@ -20,7 +22,9 @@ const ProductList = ({ products }: { products: ProductsData[] }) => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 ">
       {productState.map((product) => (
         <div key={product.id}>
-          <ProductCard product={product} />
+          <Link href={`/product/${product.id}`}>
+            <ProductCard product={product} />
+          </Link>
         </div>
       ))}
     </div>

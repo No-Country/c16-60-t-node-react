@@ -73,3 +73,12 @@ export const getAllProducts = async (filter: { category?: string[] } = {}) => {
   });
   return products;
 };
+
+export const getProductById = async (id: number) => {
+  const product = await prisma.products.findUnique({
+    where: {
+      id,
+    },
+  });
+  return product;
+};

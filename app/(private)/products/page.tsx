@@ -7,7 +7,7 @@ const Product = async () => {
 
   return (
     <div className="mx-auto max-w-screen-2xl flex items-start justify-around relative  p-10">
-      <Sidebar links={[]} />
+      <Sidebar />
       <section>
         <ProductList products={products} />
       </section>
