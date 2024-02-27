@@ -1,9 +1,9 @@
-import { FormDonation } from "./_components/formDonation";
+import { CardDonation } from "./_components/CardDonation";
 
 const DonationsPage = () => {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center">
-      <FormDonation />
+    <div className=' w-full flex justify-center sm:items-center sm:min-h-screen'>
+      <CardDonation />
     </div>
   );
 };
