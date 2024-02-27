@@ -65,8 +65,11 @@ export const getAllDonations = async () => {
 };
 
 // Productos
-
-export const getAllProducts = async () => {
-  const product = await prisma.products.findMany();
-  return product;
+export const getAllProducts = async (filter: { category?: string[] } = {}) => {
+  const { category } = filter;
+  const whereClause = category && category.length > 0 ? { category: { in: category } } : {};
+  const products = await prisma.products.findMany({
+    where: whereClause,
+  });
+  return products;
 };
