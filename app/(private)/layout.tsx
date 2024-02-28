@@ -1,4 +1,3 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "./_components/Navbar";
 
 export const metadata = {
@@ -7,9 +6,9 @@ export const metadata = {
 };
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ClerkProvider>
+    <>
       <Navbar />
       {children}
-    </ClerkProvider>
+    </>
   );
 }

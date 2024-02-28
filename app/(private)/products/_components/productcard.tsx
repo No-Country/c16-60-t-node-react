@@ -31,7 +31,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <Button
           variant="default"
           asChild
-          className=" transition-all hidden group-hover:block bg-violet-500 hover:bg-blue-700 text-white font-bold w-full rounded focus:outline-none"
+          className=" transition-all hidden group-hover:block bg-violet-500 hover:bg-violet-700 text-white font-bold w-full rounded focus:outline-none"
         >
           <div>
             <ShoppingCart className="inline-block align-middle mr-2" />

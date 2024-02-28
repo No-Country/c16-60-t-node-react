@@ -7,7 +7,7 @@
 .yarn/install-state.gz
 
 #Variables de entorno
-.env
+.env.local
 
 
 # testing
@@ -30,15 +30,14 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
-
+.env
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.env
+
 /pgdata
 pgdata/
 
