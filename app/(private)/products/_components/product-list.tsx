@@ -5,6 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ProductCard from "./productcard";
 
+
+
+
 const ProductList = ({ products }: { products: ProductsData[] }) => {
   const [productState, setProductState] = useState<ProductsData[]>(products);
   // Zustand
