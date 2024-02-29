@@ -10,14 +10,15 @@ const poppins = Poppins({
 const Logo = () => {
   return (
     <Link href='/'>
-    <div className="flex items-center lg:m-0">
-      <Image src={"chat-round.svg"} alt="" width={25} height={25} />
-      <p className={`${poppins.className} text-2xl lg:text-3xl  whitespace-nowrap`}>
-        <span className="font-extrabold">
-          Smart<span className="text-violet-700">Help</span>
-        </span>
-      </p>
-    </div>
+      <div className='flex items-center lg:m-0 w-40'>
+        <Image src={"chat-round.svg"} alt='' width={25} height={25} />
+        <p
+          className={`${poppins.className} text-2xl lg:text-3xl  whitespace-nowrap`}>
+          <span className='font-extrabold'>
+            Smart<span className='text-violet-700'>Help</span>
+          </span>
+        </p>
+      </div>
     </Link>
   );
 };

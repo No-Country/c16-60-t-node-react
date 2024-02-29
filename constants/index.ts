@@ -5,6 +5,15 @@ export const NAV_LINKS = [
   { href: "/contactos", key: "contactos", label: "Contactos" },
 ];
 
+import { ClipboardList, HandCoins, ShoppingBasket, ShoppingCart } from "lucide-react";
+
+export const NAV_LINKS_PRIVATE = [
+  { href: "/cart", key: "cart", label: "Carrito de compras", icon:ShoppingCart },
+  { href: "/list", key: "list", label: "Lista de donaciones ", icon:ClipboardList },
+  { href: "/products", key: "products", label: "Productos", icon:ShoppingBasket },
+  { href: "/donations", key: "donations", label: "Donaciones", icon:HandCoins },
+];
+
 // CAMP SECTION
 export const PEOPLE_URL = ["/person-1.png", "/person-2.png", "/person-3.png", "/person-4.png"];
 
