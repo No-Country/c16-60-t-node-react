@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -8,7 +9,8 @@ const poppins = Poppins({
 
 const Logo = () => {
   return (
-    <div className="flex  items-center  lg:m-0">
+    <Link href='/'>
+    <div className="flex items-center lg:m-0">
       <Image src={"chat-round.svg"} alt="" width={25} height={25} />
       <p className={`${poppins.className} text-2xl lg:text-3xl  whitespace-nowrap`}>
         <span className="font-extrabold">
@@ -16,6 +18,7 @@ const Logo = () => {
         </span>
       </p>
     </div>
+    </Link>
   );
 };
 
