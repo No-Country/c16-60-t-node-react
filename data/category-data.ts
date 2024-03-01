@@ -1,55 +1,61 @@
 export interface CategoryData {
   id: number;
   name: Category;
-  icon: IconType;
+  icon: string;
 }
 
 export enum Category {
-  BEBIDA = "bebidas",
-  ALIMENTOS_SECOS = "alimentos secos",
-  ALIMENTOS_CONSERVADOS = "alimentos conservados",
-  PRODUCTOS_HIGIENE = "productos de higiene",
-  PRODUCTOS_LIMPIEZA = "productos de limpieza",
-  ALIMENTOS_NECESIDAD = "alimentos de necesidad",
+  BEBIDA = "Bebidas",
+  ALIMENTOS_SECOS = "Arroz, Granos y Pastas",
+  ALIMENTOS_CONSERVADOS = "Conservas, Enlatados y Condimentos",
+  PRODUCTOS_HIGIENE = "Cuidado Personal",
+  PRODUCTOS_LIMPIEZA = "Aseo del Hogar",
+  ALIMENTOS_NECESIDAD = "Despensa Primordial",
+  ALIMENTOS_MASCOTAS = "Mascotas",
+  LACTEOS = "Leche y Huevos",
 }
 
 // Iconos para el Sidebar
-import { FaBottleWater, FaBowlFood } from "react-icons/fa6";
-import { IconType } from "react-icons/lib";
-import { MdCleaningServices, MdOutlineEmojiFoodBeverage, MdPersonalInjury } from "react-icons/md";
-import { PiBowlFoodFill } from "react-icons/pi";
 
 export const CategoryDat: CategoryData[] = [
   {
     id: 1,
     name: Category.BEBIDA,
-    icon: FaBottleWater,
+    icon: "/icons/bebidas.png",
   },
-
   {
     id: 2,
     name: Category.ALIMENTOS_SECOS,
-    icon: PiBowlFoodFill,
+    icon: "/icons/alimentos-secos.png",
   },
-
   {
     id: 3,
     name: Category.ALIMENTOS_CONSERVADOS,
-    icon: FaBowlFood,
+    icon: "/icons/alimentos-conservados.png",
   },
   {
     id: 4,
     name: Category.PRODUCTOS_HIGIENE,
-    icon: MdPersonalInjury,
+    icon: "/icons/higiene.png",
   },
   {
     id: 5,
     name: Category.PRODUCTOS_LIMPIEZA,
-    icon: MdCleaningServices,
+    icon: "/icons/limpieza.png",
   },
   {
     id: 6,
     name: Category.ALIMENTOS_NECESIDAD,
-    icon: MdOutlineEmojiFoodBeverage,
+    icon: "/icons/necesidad.png",
+  },
+  {
+    id: 7,
+    name: Category.LACTEOS,
+    icon: "/icons/lacteos.png",
+  },
+  {
+    id: 8,
+    name: Category.ALIMENTOS_MASCOTAS,
+    icon: "/icons/mascotas.png",
   },
 ];

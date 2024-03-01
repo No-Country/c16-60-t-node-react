@@ -3,5 +3,5 @@ export const metadata = {
   description: "SEO Title",
 };
 export default function ProductLayout({ children }: { children: React.ReactNode }) {
-  return <div className="bg-slate-100 ">{children}</div>;
+  return <div className="bg-[#FAFAFA] ">{children}</div>;
 }
