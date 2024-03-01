@@ -20,6 +20,8 @@ const config = {
     extend: {
       colors: {
         'custom-purple': '#421C86',
+        'custom-green': '#77E0A8',
+        'custom-white': '#FAFBFE',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
