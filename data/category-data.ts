@@ -1,11 +1,11 @@
 export interface CategoryData {
   id: number;
   name: Category;
+  icon: IconType;
 }
 
 export enum Category {
-  BEBIDA = "bebida",
-  LIMPIEZA = "limpieza",
+  BEBIDA = "bebidas",
   ALIMENTOS_SECOS = "alimentos secos",
   ALIMENTOS_CONSERVADOS = "alimentos conservados",
   PRODUCTOS_HIGIENE = "productos de higiene",
@@ -13,38 +13,43 @@ export enum Category {
   ALIMENTOS_NECESIDAD = "alimentos de necesidad",
 }
 
-// Agregar a Prisma
+// Iconos para el Sidebar
+import { FaBottleWater, FaBowlFood } from "react-icons/fa6";
+import { IconType } from "react-icons/lib";
+import { MdCleaningServices, MdOutlineEmojiFoodBeverage, MdPersonalInjury } from "react-icons/md";
+import { PiBowlFoodFill } from "react-icons/pi";
 
 export const CategoryDat: CategoryData[] = [
   {
     id: 1,
     name: Category.BEBIDA,
+    icon: FaBottleWater,
   },
 
   {
     id: 2,
-    name: Category.LIMPIEZA,
+    name: Category.ALIMENTOS_SECOS,
+    icon: PiBowlFoodFill,
   },
 
   {
     id: 3,
-    name: Category.ALIMENTOS_SECOS,
+    name: Category.ALIMENTOS_CONSERVADOS,
+    icon: FaBowlFood,
   },
-
   {
     id: 4,
-    name: Category.ALIMENTOS_CONSERVADOS,
+    name: Category.PRODUCTOS_HIGIENE,
+    icon: MdPersonalInjury,
   },
   {
     id: 5,
-    name: Category.PRODUCTOS_HIGIENE,
+    name: Category.PRODUCTOS_LIMPIEZA,
+    icon: MdCleaningServices,
   },
   {
     id: 6,
-    name: Category.PRODUCTOS_LIMPIEZA,
-  },
-  {
-    id: 7,
     name: Category.ALIMENTOS_NECESIDAD,
+    icon: MdOutlineEmojiFoodBeverage,
   },
 ];

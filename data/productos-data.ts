@@ -13,22 +13,12 @@ export const products: ProductsData[] = [
     description:
       "PranaMar el sabor del mar, se presenta como una opción natural y equilibrada para rehidratar el cuerpo. Rica en minerales esenciales, como sodio, potasio y magnesio, ayuda a restablecer los electrolitos perdidos durante la actividad física intensa o la deshidratación. Su composición se asemeja a la del plasma sanguíneo, lo que facilita una absorción rápida y eficiente de los nutrientes, contribuyendo así a mantener un equilibrio hídrico adecuado y a mejorar el rendimiento físico. Es importante destacar que debe llevarse a cabo de manera gradual, en caso de dudas puede consultar con un especialista.",
   },
-  {
-    id: 2,
-    image:
-      "https://static.wixstatic.com/media/5a5a9d_3cd847a4406140acb18d33acbb7918c3~mv2.jpg/v1/fill/w_500,h_375,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5a5a9d_3cd847a4406140acb18d33acbb7918c3~mv2.jpg",
-    name: "Bidon de 20 Lts de Agua",
-    category: Category.LIMPIEZA,
-    price: 135,
-    quantity: 20,
-    description:
-      "PranaMar el sabor del mar, se presenta como una opción natural y equilibrada para rehidratar el cuerpo. Rica en minerales esenciales, como sodio, potasio y magnesio, ayuda a restablecer los electrolitos perdidos durante la actividad física intensa o la deshidratación. Su composición se asemeja a la del plasma sanguíneo, lo que facilita una absorción rápida y eficiente de los nutrientes, contribuyendo así a mantener un equilibrio hídrico adecuado y a mejorar el rendimiento físico. Es importante destacar que debe llevarse a cabo de manera gradual, en caso de dudas puede consultar con un especialista.",
-  },
+
   {
     id: 3,
     image: "	https://http2.mlstatic.com/D_NQ_NP_969724-MLA74245733727_012024-O.webp",
-    name: "Detergente para Limpieza",
-    category: Category.LIMPIEZA,
+    name: "Detergente Finish para baños 30 Capsulas",
+    category: Category.PRODUCTOS_LIMPIEZA,
     price: 98,
     quantity: 20,
     description:
@@ -37,17 +27,17 @@ export const products: ProductsData[] = [
   {
     id: 5,
     image: "https://http2.mlstatic.com/D_NQ_NP_742819-MLU74408303093_022024-O.webp",
-    name: "Fideos de arroz",
+    name: "Arroz Diana Con Fideos 460G",
     category: Category.ALIMENTOS_SECOS,
     price: 112,
-    quantity: 20,
+    quantity: 0,
     description:
       "Deléitate con la exquisita textura y sabor de nuestros fideos de arroz, una opción nutritiva y versátil para tus platos favoritos. Elaborados con los mejores granos de arroz y siguiendo técnicas tradicionales, nuestros fideos garantizan una experiencia culinaria auténtica y satisfactoria. Su suave consistencia y rápida cocción los convierten en la elección perfecta para sopas, salteados o platos fríos. Además, son naturalmente libres de gluten, ideales para aquellos con dietas especiales. Descubre la calidad y el sabor incomparables de nuestros fideos de arroz, y transforma tus comidas en auténticos festines de la cocina asiática.",
   },
   {
     id: 6,
     image: "https://http2.mlstatic.com/D_670957-MLA70460510773_072023-V.jpg",
-    name: "Arroz",
+    name: "Arroz Castellano Premium 500G",
     category: Category.ALIMENTOS_SECOS,
     price: 135,
     quantity: 20,
@@ -57,7 +47,7 @@ export const products: ProductsData[] = [
   {
     id: 7,
     image: "https://http2.mlstatic.com/D_NQ_NP_686178-MLU74332003605_012024-O.webp",
-    name: "Atun en lata",
+    name: "Atun En Lata Siete Lagos",
     category: Category.ALIMENTOS_CONSERVADOS,
     price: 85,
     quantity: 20,
@@ -67,7 +57,7 @@ export const products: ProductsData[] = [
   {
     id: 8,
     image: "https://http2.mlstatic.com/D_NQ_NP_628033-MLU72636991469_112023-O.webp",
-    name: "Caballa en Conserva",
+    name: "Caballa en Conserva Publish",
     category: Category.ALIMENTOS_CONSERVADOS,
     price: 135,
     quantity: 20,
@@ -77,7 +67,7 @@ export const products: ProductsData[] = [
   {
     id: 9,
     image: "https://http2.mlstatic.com/D_NQ_NP_744966-MLA52629292897_112022-O.webp",
-    name: "Jabon",
+    name: "Jabones en barra puro Vegetal Nuez Pecan y cacao Tododia",
     category: Category.PRODUCTOS_HIGIENE,
     price: 85,
     quantity: 20,
@@ -85,9 +75,9 @@ export const products: ProductsData[] = [
       "Experimenta una limpieza suave y eficaz con nuestro jabón de manos, diseñado para cuidar y proteger tu piel con cada lavado. Enriquecido con ingredientes hidratantes y suavizantes, este jabón deja tus manos irresistiblemente suaves y perfumadas, sin resecarlas. Su fórmula delicada y libre de irritantes es ideal para toda la familia, incluso para pieles sensibles. Disponible en una variedad de fragancias frescas y revitalizantes, transforma cada momento de higiene en un placer aromático. Confía en nuestro jabón de manos para mantener la limpieza y el bienestar de tus manos, día tras día, con una sensación de frescura y confort incomparables.",
   },
   {
-    id: 10,
+    id: 0,
     image: "https://http2.mlstatic.com/D_NQ_NP_928642-MLA74141740939_012024-O.webp",
-    name: "Bolsas de residuo",
+    name: " Set De Bolsas de Residuo pack 10",
     category: Category.PRODUCTOS_LIMPIEZA,
     price: 100,
     quantity: 20,
@@ -97,7 +87,7 @@ export const products: ProductsData[] = [
   {
     id: 11,
     image: "https://http2.mlstatic.com/D_NQ_NP_910713-MLU73128393648_122023-O.webp",
-    name: "Papel higienico",
+    name: "Papel Higienico Felpita Superpack 30 Rollos",
     category: Category.PRODUCTOS_HIGIENE,
     price: 135,
     quantity: 20,
@@ -107,7 +97,7 @@ export const products: ProductsData[] = [
   {
     id: 12,
     image: "https://http2.mlstatic.com/D_NQ_NP_845480-MLU72787800319_112023-O.webp",
-    name: "Pañales XXG",
+    name: "Pañales Pampers XG  Deluxe Protection",
     category: Category.PRODUCTOS_HIGIENE,
     price: 135,
     quantity: 20,
@@ -117,7 +107,7 @@ export const products: ProductsData[] = [
   {
     id: 13,
     image: "https://http2.mlstatic.com/D_NQ_NP_998128-MLA74111690720_012024-O.webp",
-    name: "Fideos Matarazo",
+    name: "Fideos Matarazo Tirabuzon N28 Trigo",
     category: Category.ALIMENTOS_SECOS,
     price: 100,
     quantity: 20,
@@ -127,14 +117,13 @@ export const products: ProductsData[] = [
   {
     id: 15,
     image: "https://http2.mlstatic.com/D_NQ_NP_601168-MLA74246731371_012024-O.webp",
-    name: "Yerba Mate",
+    name: "Yerba Mate Premium Canarias 1KG",
     category: Category.ALIMENTOS_NECESIDAD,
     price: 133,
-    quantity: 20,
+    quantity: 0,
     description:
       "Descubre el sabor auténtico de la tradición sudamericana con nuestra yerba mate premium, cuidadosamente seleccionada de las mejores plantaciones. Cultivada bajo el sol tropical y cosechada con esmero, nuestra yerba mate ofrece un equilibrio perfecto entre sabor robusto y aroma fresco. Rica en antioxidantes y nutrientes, esta infusión revitalizante es ideal para acompañarte en tus momentos de energía y concentración. Disfruta de su sabor único y estimulante tanto caliente como frío, compartiendo la alegría de una buena conversación o sumergiéndote en un momento de tranquilidad. Eleva tu experiencia con nuestra yerba mate premium y siente la pasión de la cultura gaucha en cada sorbo.",
   },
 ];
-
 
 //--
