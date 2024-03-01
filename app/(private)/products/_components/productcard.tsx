@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ProductsData } from "@/interfaces/productos";
 import { ShoppingCart } from "lucide-react";
+import Badge from "../../_components/Badge";
 import Image from "next/image";
 import React from "react";
 
@@ -10,10 +11,11 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   // Cambié el nombre de la función a PascalCase según las convenciones de React
-  const { image, name, price } = product;
+  const { image, name, price, quantity } = product;
 
   return (
-    <div className=" w-60 h-72 group hover:scale-105 flex flex-col justify-between bg-white px-4 py-8 shadow hover:shadow-lg rounded border-transparent hover:border-gray-500 cursor-pointer transition-all">
+    <div className=" w-60 h-72 group hover:scale-105 flex flex-col justify-between bg-white px-4 py-8 shadow hover:shadow-lg rounded border-transparent hover:border-gray-500 cursor-pointer transition-all relative">
+      <Badge quantity={quantity} />
       <Image
         src={image}
         alt={name}

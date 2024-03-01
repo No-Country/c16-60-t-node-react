@@ -6,11 +6,11 @@ function Badge({ quantity }: BadgeProps) {
   return (
     <>
       {badge ? (
-        <div className="absolute right-1 rounded-sm top-0 px-4 py-2 bg-green-500 text-xs text-white font-extrabold">
+        <div className="absolute right-0 rounded-sm top-0 px-4 py-2 bg-green-500 text-xs text-white font-extrabold">
           In Stock
         </div>
       ) : (
-        <div className="absolute right-1 rounded-sm top-0 px-4 py-2 bg-red-500 text-xs text-white font-extrabold">
+        <div className="absolute right-0 rounded-sm top-0 px-4 py-2 bg-red-500 text-xs text-white font-extrabold">
           Out Stock
         </div>
       )}
