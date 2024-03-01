@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <div className=" w-60 h-72 group hover:scale-105 flex flex-col justify-between bg-white px-4 py-8 shadow hover:shadow-lg rounded border-transparent hover:border-gray-500 cursor-pointer transition-all relative">
-      <Badge quantity={quantity} />
+      
       <Image
         src={image}
         alt={name}
