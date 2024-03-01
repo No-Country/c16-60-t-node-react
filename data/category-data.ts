@@ -1,50 +1,61 @@
 export interface CategoryData {
   id: number;
   name: Category;
+  icon: string;
 }
 
 export enum Category {
-  BEBIDA = "bebida",
-  LIMPIEZA = "limpieza",
-  ALIMENTOS_SECOS = "alimentos secos",
-  ALIMENTOS_CONSERVADOS = "alimentos conservados",
-  PRODUCTOS_HIGIENE = "productos de higiene",
-  PRODUCTOS_LIMPIEZA = "productos de limpieza",
-  ALIMENTOS_NECESIDAD = "alimentos de necesidad",
+  BEBIDA = "Bebidas",
+  ALIMENTOS_SECOS = "Arroz, Granos y Pastas",
+  ALIMENTOS_CONSERVADOS = "Conservas, Enlatados y Condimentos",
+  PRODUCTOS_HIGIENE = "Cuidado Personal",
+  PRODUCTOS_LIMPIEZA = "Aseo del Hogar",
+  ALIMENTOS_NECESIDAD = "Despensa Primordial",
+  ALIMENTOS_MASCOTAS = "Mascotas",
+  LACTEOS = "Leche y Huevos",
 }
 
-// Agregar a Prisma
+// Iconos para el Sidebar
 
 export const CategoryDat: CategoryData[] = [
   {
     id: 1,
     name: Category.BEBIDA,
+    icon: "/icons/bebidas.png",
   },
-
   {
     id: 2,
-    name: Category.LIMPIEZA,
+    name: Category.ALIMENTOS_SECOS,
+    icon: "/icons/alimentos-secos.png",
   },
-
   {
     id: 3,
-    name: Category.ALIMENTOS_SECOS,
+    name: Category.ALIMENTOS_CONSERVADOS,
+    icon: "/icons/alimentos-conservados.png",
   },
-
   {
     id: 4,
-    name: Category.ALIMENTOS_CONSERVADOS,
+    name: Category.PRODUCTOS_HIGIENE,
+    icon: "/icons/higiene.png",
   },
   {
     id: 5,
-    name: Category.PRODUCTOS_HIGIENE,
+    name: Category.PRODUCTOS_LIMPIEZA,
+    icon: "/icons/limpieza.png",
   },
   {
     id: 6,
-    name: Category.PRODUCTOS_LIMPIEZA,
+    name: Category.ALIMENTOS_NECESIDAD,
+    icon: "/icons/necesidad.png",
   },
   {
     id: 7,
-    name: Category.ALIMENTOS_NECESIDAD,
+    name: Category.LACTEOS,
+    icon: "/icons/lacteos.png",
+  },
+  {
+    id: 8,
+    name: Category.ALIMENTOS_MASCOTAS,
+    icon: "/icons/mascotas.png",
   },
 ];
