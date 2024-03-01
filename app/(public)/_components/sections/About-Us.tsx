@@ -8,8 +8,8 @@ const AboutUs = () => {
       </h1>
 
       <section className="flex flex-col  gap-10 lg:gap-24">
-        <div className="flex flex-col items-start  lg:flex-row">
-          <div className=" h-full w-full order-1  lg:order-2 pb-5  lg:w-1/2 pt-5 lg:p-5 ">
+        <div className="flex flex-col items-center lg:items-start lg:flex-row">
+          <div className=" h-full w-full order-1  lg:order-2 pb-5  lg:w-1/2 pt-5 lg:p-5 flex flex-col justify-center text-center lg:text-left">
             <h2 className=" text-4xl lg:text-5xl pb-5 text-violet-700 font-extrabold text-wrap">
               Viviendas Prefabricadas <span className="text-gray-800">para Familias Afectadas</span>
             </h2>
@@ -21,7 +21,7 @@ const AboutUs = () => {
               enteras.
             </p>
           </div>
-          <div className="h-full lg:w-1/2  order-1  lg:pr-6">
+          <div className="h-full lg:w-1/2  order-1 px-3 lg:pr-6">
             <Image
               src={"/prefab-cabin.jpg"}
               width={400}
@@ -32,8 +32,8 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-end ">
-          <div className=" h-full pb-5 w-full lg:w-1/2 pt-5 lg:pr-9 ">
+        <div className="flex flex-col items-center lg:flex-row lg:items-end ">
+          <div className=" h-full pb-5 w-full lg:w-1/2 pt-5 lg:pr-9 text-center lg:text-left lg:pl-3">
             <h2 className=" text-4xl lg:text-5xl pb-5 text-gray-800 font-extrabold text-wrap">
               Iniciativa de <span className="text-violet-700">donación</span> de útiles escolares
             </h2>
@@ -46,7 +46,7 @@ const AboutUs = () => {
               y la integración de tecnología para un aprendizaje significativo12.
             </p>
           </div>
-          <div className="h-full lg:pr-9 lg:w-1/2">
+          <div className="h-full px-3 lg:pr-9 lg:w-1/2">
             <Image
               src={"/student.jpg"}
               width={400}
