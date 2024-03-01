@@ -27,7 +27,7 @@ export const MobileMenu = () => {
               <Logo />
             </SheetTitle>
             <div className='grid gap-4 py-4'>
-              <div className='flex flex-col items-center gap-4'>
+              <div className='flex flex-col items-start gap-4'>
                 {NAV_LINKS_PRIVATE.map(({ href, key, label, icon: Icon }) => (
                   <Button variant='ghost' key={key}>
                     <Link href={href} className='text-base flex flex-row gap-3'>
