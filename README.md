@@ -78,3 +78,5 @@ POSTGRES_PASSWORD=password123`
 - Envio de Email usando Nodemailer
 - EMAIL_USER=**\***@gmail.com
 - EMAIL_PASSWORD=**\*\*\*\***
+
+//moviendo info
