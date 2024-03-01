@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ProductsData } from "@/interfaces/productos";
 import { ShoppingCart } from "lucide-react";
+import Badge from "../../_components/Badge";
 import Image from "next/image";
 import React from "react";
 
