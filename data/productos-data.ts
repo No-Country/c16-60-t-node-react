@@ -135,3 +135,6 @@ export const products: ProductsData[] = [
       "Descubre el sabor auténtico de la tradición sudamericana con nuestra yerba mate premium, cuidadosamente seleccionada de las mejores plantaciones. Cultivada bajo el sol tropical y cosechada con esmero, nuestra yerba mate ofrece un equilibrio perfecto entre sabor robusto y aroma fresco. Rica en antioxidantes y nutrientes, esta infusión revitalizante es ideal para acompañarte en tus momentos de energía y concentración. Disfruta de su sabor único y estimulante tanto caliente como frío, compartiendo la alegría de una buena conversación o sumergiéndote en un momento de tranquilidad. Eleva tu experiencia con nuestra yerba mate premium y siente la pasión de la cultura gaucha en cada sorbo.",
   },
 ];
+
+
+//--
