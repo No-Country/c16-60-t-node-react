@@ -2,7 +2,7 @@ interface BadgeProps {
   quantity: number;
 }
 function Badge({ quantity }: BadgeProps) {
-  const badge: boolean = quantity !== null && quantity >= 0 ? true : false;
+  const badge: boolean = quantity >= 0 ? true : false;
   return (
     <>
       {badge ? (
