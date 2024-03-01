@@ -9,7 +9,7 @@ const Sidebar = () => {
   const state = useCategoryState((state: any) => state.categories);
 
   return (
-    <aside className="w-[330px] bg-white  sticky top-0 bottom-0 left-0 min-h-screen p-8 rounded-lg">
+    <aside className="w-[330px] bg-white hidden xl:flex  sticky top-0 bottom-0 left-0 min-h-screen p-8 rounded-lg">
       <h3 className="text-xl lg:text-xl  font-bold  text-gray-800 mb-5">Listado productos</h3>
       <ul className="space-y-2">
         {CategoryDat.map((cat) => (

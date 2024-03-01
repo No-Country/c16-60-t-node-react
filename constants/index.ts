@@ -5,13 +5,20 @@ export const NAV_LINKS = [
   { href: "/contactos", key: "contactos", label: "Contactos" },
 ];
 
-import { ClipboardList, HandCoins, ShoppingBasket, ShoppingCart } from "lucide-react";
+// Remix icons
+
+import {
+  RiFileList3Line,
+  RiHandHeartLine,
+  RiShoppingBasketLine,
+  RiShoppingCart2Line,
+} from "react-icons/ri";
 
 export const NAV_LINKS_PRIVATE = [
-  { href: "/cart", key: "cart", label: "Carrito de compras", icon:ShoppingCart },
-  { href: "/list", key: "list", label: "Lista de donaciones ", icon:ClipboardList },
-  { href: "/products", key: "products", label: "Productos", icon:ShoppingBasket },
-  { href: "/donations", key: "donations", label: "Donaciones", icon:HandCoins },
+  { href: "/donations", key: "donations", label: "Donaciones", icon: RiHandHeartLine },
+  { href: "/products", key: "products", label: "Productos", icon: RiShoppingBasketLine },
+  { href: "/list", key: "list", label: "Lista de donaciones ", icon: RiFileList3Line },
+  { href: "/cart", key: "cart", label: "Carrito de compras", icon: RiShoppingCart2Line },
 ];
 
 // CAMP SECTION
