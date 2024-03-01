@@ -1,5 +1,6 @@
 import { getProductById } from "@/actions/actions";
 import { Button } from "@/components/ui/button";
+import Badge from "../../_components/Badge";
 import Image from "next/image";
 
 interface Props {
@@ -11,22 +12,18 @@ interface Props {
 const ProductPage = async ({ params: { id } }: Props) => {
   const productById = await getProductById(Number(id));
 
-
-  const badge: boolean = productById !== null && productById.quantity >= 0 ? true : false;
   return (
     <section className="max-w-screen-2xl mx-auto h-full">
       <div className="md:flex justify-center mx-auto md:mt-5 p-2 md:w-[950px]">
-        <div className="w-full md:max-w-2xl h-[450px] flex items-center justify-center sm:border-b border-slate-300 relative">
-          {badge ? (
-            <div className="absolute right-1 rounded-sm top-0 px-4 py-2 bg-green-500 text-xs text-white font-extrabold">
-              In Stock
-            </div>
-          ) : (
-            <div className="absolute right-1 rounded-sm top-0 px-4 py-2 bg-red-500 text-xs text-white font-extrabold">
-              Out Stock
-            </div>
-          )}
-          <Image src={productById.image} alt={productById.name} width={500} height={500} />
+        <div className="w-full md:max-w-2xl h-full md: max-h-2xl flex items-center justify-center relative overflow-hidden">
+          <Badge quantity={productById.quantity} />
+          <Image
+            src={productById.image}
+            alt={productById.name}
+            width={500}
+            height={500}
+            className="object-cover"
+          />
         </div>
         <div className="w-full md:max-w-xl h-full flex flex-col ml-0 md:ml-4 gap-4 mt-4  md:mt-0 md:border-l pl-6">
           <h1 className="text-lg md:text-xl font-extrabold ">{productById.name}</h1>
