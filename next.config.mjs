@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "http2.mlstatic.com",
       },
+      {
+        protocol: "https",
+        hostname: "pilardetodos.com.ar",
+      },
     ],
   },
 };
