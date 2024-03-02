@@ -10,7 +10,7 @@ const Navbar = () => {
   const { userId } = auth();
 
   return (
-    <nav className="flex items-center  justify-between max-w-screen-xl mx-auto  pt-7 ">
+    <nav className="flex items-center  justify-between max-w-screen-xl mx-auto px-3 pt-7 ">
       {/* Logo */}
       <Logo />
 

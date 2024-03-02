@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <section className=" flex gap-9  flex-col lg:flex-row items-center py-10 xl:pt-16">
+    <section className=" flex gap-9  flex-col lg:flex-row items-center pb-10 pt-14 lg:py-10 xl:pt-16 px-2">
       <div className="flex flex-col justify-center gap-5 lg:gap-2 flex-1 lg:pr-9 ">
         <h1 className="text-5xl lg:text-6xl lg:pb-4 text-gray-800 font-extrabold text-center text-wrap lg:text-left">
           Smart Help: donaciones que <span className="text-violet-700">impactan</span>.
