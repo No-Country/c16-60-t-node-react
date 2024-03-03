@@ -15,33 +15,35 @@ const ProductPage = async ({ params: { id } }: Props) => {
   const allProducts = (await getAllProducts()) || [];
 
   // const productosSugeridos = allProducts.filter((cat: string) => cat.category === productById.category);
-
+  const doblePrice: number = productById.price * 2;
   const productosSugeridos = allProducts;
 
   return (
-    <section className="max-w-screen-2xl mx-auto mt-8">
+    <section className="mx-auto mt-8 p-2 max-w-screen-2xl">
       {/* top content */}
-      <div className="flex flex-col md:flex-row items-center md:w-full md:h-[700px] mx-auto">
+      <div className="flex md:flex-row flex-col items-center mx-auto md:w-[1280px] md:h-[400px]">
         {/* img box */}
-        <div className="md:w-[50%] h-[100%] md:order-2 flex items-center justify-center overflow-hidden">
-          <Image src={productById.image} width={700} height={700} className="w-full h-full" />
+        <div className="flex justify-center items-center md:order-2 md:w-[50%] h-[100%] overflow-hidden">
+          <Image src={productById.image} width={300} height={300} className="" />
         </div>
         {/* Columna de imágenes */}
-        <div className="md:w-[10%] md:h-[100%] md:order-1 md:mt-4">
-          <div className="w-[90px] h-[90px] border border-b-slate-400 rounded-md mx-auto my-6 flex items-center justify-center object-contain">
-            <Image src={productById.image} width={80} height={80} />
+        <div className="md:order-1 md:mt-4 md:w-[10%] md:h-[100%]">
+          <div className="flex justify-center items-center mx-auto border border-b-slate-400 rounded-md w-[90px] h-[90px] object-contain">
+            <Image src={productById.image} width={40} height={40} />
           </div>
           {/* Agrega más imágenes aquí si es necesario */}
         </div>
         {/* Price rectangle */}
-        <div className="md:w-[40%] md:h-[100%] md:order-3">
-          <div className="w-full h-full md:w-[500px] md:h-[200px] md:border border-t-slate-400 rounded-md mx-auto p-4">
-            <h1 className="font-bold text-2xl mt-4 border-b-slate-500">
+        <div className="md:order-3 md:w-[40%] md:h-[100%]">
+          <div className="p-4 md:border border-t-slate-400 rounded-md w-full md:w-[450px] h-full md:h-[200px]">
+            <h3 className="tex-mdfont-bold text-slate-400">Tienda: Doña Ema</h3>
+            <h1 className="border-b-slate-500 font-bold text-2xl">
               {productById.name} x {productById.quantity} unidades
             </h1>
-            <div className="flex items-center justify-between mt-10">
+            <h3 className="mt-4 text-slate-400 text-sm line-through">${doblePrice}</h3>
+            <div className="flex justify-between items-center">
               <h3 className="text-2xl text-blue-400">${productById.price}</h3>
-              <Button className="w-60 bg-violet-500 hover:bg-violet-600 text-md">
+              <Button className="bg-violet-500 hover:bg-violet-600 w-60 text-md">
                 Agregar
                 <span className="ml-4">
                   <ShoppingCart className="" />
@@ -52,15 +54,23 @@ const ProductPage = async ({ params: { id } }: Props) => {
         </div>
       </div>
       {/* Description */}
-      <div className="w-full hmd:w-full md:h-[280px]">
-        <h3 className="text-center text-xl font-bold mb-10">Descripción:</h3>
-        <h1 className="text-2xl font-bold mb-10 border-b">{productById.name}</h1>
-        <p className="px-4 text-justify text-lg font-light">{productById.description}</p>
+      <div className="mx-auto mt-10 w-full md:w-[1280px]">
+        <h3 className="mb-4 font-bold text-xl md:text-start lg:text-center">Descripción:</h3>
+        <h1 className="mb-4 border-b font-bold text-2xl">{productById.name}</h1>
+        <p className="mx-auto mb-4 px-4 md:w-[80%] font-light text-justify text-lg">
+          {productById.description}
+        </p>
       </div>
       {/* Swipper */}
-      <div className="md:w-full md:h-full mt-5">
-        <h1 className="font-bold text-2xl mb-5">También podría interesarte</h1>
-        <div className="w-full h-full  md:h-[450px] bg-red-500 flex alingn-center justify-center">
+      <div className="mx-auto mt-4 md:w-[1280px] md:h-full">
+        <h1 className="mb-5 font-bold text-2xl">También podría interesarte</h1>
+        <div className="flex justify-center w-full h-full md:h-[350px] alingn-center">
+          <Carrousel productosSugeridos={productosSugeridos} />
+        </div>
+      </div>
+      <div className="mt-4 md:w-full md:h-full">
+        <h1 className="mb-5 font-bold text-2xl">Otros productos</h1>
+        <div className="flex justify-center mx-auto w-full md:w-[1280px] h-full md:h-[350px] alingn-center">
           <Carrousel productosSugeridos={productosSugeridos} />
         </div>
       </div>
