@@ -16,11 +16,11 @@ const Carrousel: any = ({ productosSugeridos }: any) => {
         opts={{
           align: "start",
         }}
-        className="w-full max-w-[1080px] "
+        className="w-full md:max-w-[1080px]"
       >
-        <CarouselContent className="w-full ">
+        <CarouselContent className="w-full">
           {productosSugeridos.map((product: ProductsData) => (
-            <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/4 xl:basis-1/5">
+            <CarouselItem key={product.id} className="basis-1/2 lg:basis-1/4 xl:basis-1/5">
               <div className="p-1">
                 <ProductCard product={product} />
               </div>
