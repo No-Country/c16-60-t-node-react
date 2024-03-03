@@ -80,6 +80,9 @@ export const getProductById = async (id: number) => {
       id,
     },
   });
+
+  !product && new Error("Product not found");
+
   return product;
 };
 

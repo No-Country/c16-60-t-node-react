@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ProductsData } from "@/interfaces/productos";
 import { ShoppingCart } from "lucide-react";
-import Badge from "../../_components/Badge";
 import Image from "next/image";
 import React from "react";
 
@@ -16,13 +15,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { image, name, price, quantity } = product;
 
   return (
-    <div className=" w-52 h-80 hover:scale-105 flex flex-col items-baseline bg-white px-4 pt-8 pb-4 shadow hover:shadow-lg rounded border-transparent hover:border-gray-500 cursor-pointer transition-all relative">
-      <div className=" text-violet-400 absolute right-4 text-xl top-4 ">
+    <div className="w-40 lg:w-52 h-64 lg:h-80 hover:scale-105 relative flex flex-col items-baseline hover:border-gray-500 bg-white shadow hover:shadow-lg px-4 pt-8 pb-4 border-transparent rounded transition-all cursor-pointer">
+      <div className="top-4 right-4 absolute text-violet-400 text-xl">
         <RiHeart3Line />
       </div>
       {quantity === 0 && (
         <div>
-          <span className="text-red-400 py-1.5 px-2 bg-red-200/80 text-xs font-semibold rounded-br-sm  absolute top-0 left-0">
+          <span className="top-0 left-0 absolute bg-red-200/80 px-2 py-1.5 rounded-br-sm font-semibold text-red-400 text-xs">
             Agotado
           </span>
         </div>
@@ -32,22 +31,24 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         alt={name}
         width={100}
         height={100}
-        className="mx-auto  w-28 h-32 object-contain"
+        className="mx-auto max-md:w-24 lg:w-28 max-md:h-20 lg:h-32 object-contain"
       />
-      <div className="w-full flex-1  flex flex-col items-start">
-        <p className="text-violet-600 font-semibold text-base ">${price}</p>
-        <p className="text-gray-400 line-through  font-normal text-xs">${price * 2}</p>
-        <h2 className="text-sm text-gray-700 line-clamp-2 font-semibold text-center mb-2 ">{name}</h2>
+      <div className="flex flex-col flex-1 items-start w-full">
+        <p className="font-semibold text-base text-violet-600">${price}</p>
+        <p className="font-normal text-gray-400 text-xs line-through">${price * 2}</p>
+        <h2 className="mb-2 line-clamp-2 font-semibold text-gray-700 text-left text-sm max-md:text-xs lg:text-center">
+          {name}
+        </h2>
       </div>
 
       <Button
         variant="default"
         asChild
-        className=" transition-all  bg-violet-500 hover:bg-violet-700 text-white font-bold w-full rounded focus:outline-none"
+        className="bg-violet-500 hover:bg-violet-700 rounded w-full font-bold text-white transition-all focus:outline-none"
       >
-        <div>
-          <ShoppingCart className="inline-block align-middle mr-2" />
-          <span className="text-base font-normal">Agregar </span>
+        <div className="">
+          <ShoppingCart className="inline-block max-md:hidden mr-2 align-middle" />
+          <span className="font-normal text-base">Agregar </span>
         </div>
       </Button>
     </div>
