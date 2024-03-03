@@ -2,7 +2,7 @@ import { CardDonation } from "./_components/CardDonation";
 
 const DonationsPage = () => {
   return (
-    <div className=' w-full flex justify-center sm:items-center sm:min-h-screen'>
+    <div className="flex justify-center 2xl:items-center w-full h-[calc(100vh-80px)]">
       <CardDonation />
     </div>
   );

@@ -82,3 +82,10 @@ export const getProductById = async (id: number) => {
   });
   return product;
 };
+
+// Causas
+
+export const getAllCauses = async () => {
+  const causas = await prisma.causes.findMany();
+  return causas;
+};
