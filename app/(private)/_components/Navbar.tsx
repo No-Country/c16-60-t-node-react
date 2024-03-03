@@ -6,19 +6,19 @@ import NavItem from "./NavItem";
 
 const Navbar = () => {
   return (
-    <nav className="w-full bg-white border-b border-slate-100 shadow px-0">
-      <div className="flex items-start md:items-center w-full justify-between px-3 sm:px-10 py-4">
+    <nav className="border-slate-100 bg-white shadow px-0 border-b w-full">
+      <div className="flex justify-between items-start md:items-center px-3 sm:px-10 py-4 w-full">
         <Logo />
 
         <div className="flex items-center gap-x-3">
-          <div className="flex-row hidden gap-1 md:flex">
+          <div className="md:flex flex-row gap-1 hidden">
             {NAV_LINKS_PRIVATE.map(({ href, key, icon: Icon }) => (
               <NavItem key={key} href={href}>
-                <Icon />
+                <Icon className="w-6 h-6" />
               </NavItem>
             ))}
           </div>
-          <div className="hidden md:flex w-8 h-8">
+          <div className="md:flex hidden w-8 h-8">
             <UserButton afterSignOutUrl="/" />
           </div>
         </div>

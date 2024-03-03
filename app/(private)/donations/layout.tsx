@@ -4,8 +4,8 @@ export const metadata = {
 };
 export default function DonationLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-gray-300">
-      <div className="max-w-screen-xl mx-auto ">{children}</div>
+    <div className="bg-slate-50">
+      <div className="mx-auto 3xl:max-w-screen-xl">{children}</div>
     </div>
   );
 }

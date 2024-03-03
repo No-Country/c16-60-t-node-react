@@ -11,7 +11,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <div className="flex items-center lg:m-0 w-40">
-        <Image src={"chat-round.svg"} alt="" width={25} height={25} />
+        <Image src="/chat-round.svg" alt="" width={25} height={25} />
         <p
           className={`${poppins.className} text-2xl lg:text-3xl  whitespace-nowrap font-extrabold text-gray-700`}
         >
