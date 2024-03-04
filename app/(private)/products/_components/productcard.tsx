@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { ProductsData } from "@/interfaces/productos";
-import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 import { RiHeart3Line } from "react-icons/ri";
+import ButtonAddCart from "../../_components/button-add-cart";
+
+
 
 interface ProductCardProps {
   product: ProductsData;
@@ -40,17 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {name}
         </h2>
       </div>
-
-      <Button
-        variant="default"
-        asChild
-        className="bg-violet-500 hover:bg-violet-700 rounded w-full font-bold text-white transition-all focus:outline-none"
-      >
-        <div className="">
-          <ShoppingCart className="inline-block max-md:hidden mr-2 align-middle" />
-          <span className="font-normal text-base">Agregar </span>
-        </div>
-      </Button>
+      <ButtonAddCart product={product} />
     </div>
   );
 };
