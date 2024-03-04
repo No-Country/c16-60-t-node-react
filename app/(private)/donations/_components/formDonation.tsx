@@ -12,7 +12,7 @@ export const FormDonation = async () => {
     <div className="flex flex-col w-4/5">
       <form action={donate} className="flex flex-col justify-center gap-4">
         <Select>
-          <SelectTrigger className=" font-normal text-base text-gray-500 shadow-sm rounded-md">
+          <SelectTrigger className="shadow-sm rounded-md font-normal text-base text-gray-500">
             <SelectValue placeholder="Causa a la que donar" />
           </SelectTrigger>
           <SelectContent>
@@ -27,13 +27,13 @@ export const FormDonation = async () => {
           name="amount"
           type="number"
           min="0"
-          className=" shadow-sm font-normal text-base rounded-md"
+          className="shadow-sm rounded-md font-normal text-base"
           placeholder="Valor"
           required
         />
         <Textarea
           name="message"
-          className=" shadow-sm font-normal text-base rounded-md resize-none"
+          className="shadow-sm rounded-md font-normal text-base resize-none"
           placeholder="Tu Mensaje (opcional)"
         />
         <Button type="submit" variant="green" className="text-black hover:text-black">
@@ -46,3 +46,5 @@ export const FormDonation = async () => {
     </div>
   );
 };
+
+// updated
