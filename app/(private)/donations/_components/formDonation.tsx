@@ -16,7 +16,7 @@ export const FormDonation = async () => {
             <SelectValue placeholder="Causa a la que donar" />
           </SelectTrigger>
           <SelectContent>
-            {causas.map(({ title }) => (
+            {causas.map(({ title}:{title:string}) => (
               <SelectItem key={title} value={title}>
                 {title}
               </SelectItem>
