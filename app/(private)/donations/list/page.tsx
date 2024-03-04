@@ -1,7 +1,4 @@
 //import { getAllDonations } from "@/actions/actions";
-import { donations } from "@/data/donations-data";
-import { columns } from '@/app/(private)/donations/list/column'
-import { DataTable } from "../_components/Data-Table";
 
 //TODO: Mejorar la interfas de donaciones con una tabla
 const ListDonations = async () => {
@@ -14,9 +11,8 @@ const ListDonations = async () => {
 
   return (
     <div >
-        <h1 className="font-bold text-center text-2xl text-black py-20">Lista de donaciones</h1>
+        <h1 className="py-20 font-bold text-2xl text-black text-center">Lista de donaciones</h1>
       {/* <pre>{JSON.stringify(donationes, null, 2)}</pre> */}
-      <DataTable columns={columns} data={donations} />
     </div>
   );
 };
