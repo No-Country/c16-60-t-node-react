@@ -1,8 +1,7 @@
 import { getAllProducts, getProductById } from "@/actions/actions";
 
-import { Button } from "@/components/ui/button";
-import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
+import ButtonAddCart from "../../_components/button-add-cart";
 import Carrousel from "./_components/Carrousel";
 interface Props {
   params: {
@@ -49,12 +48,9 @@ const ProductPage = async ({ params: { id } }: Props) => {
             <h3 className="mt-4 text-slate-400 text-sm line-through">${doblePrice}</h3>
             <div className="flex justify-between items-center">
               <h3 className="font-semibold text-2xl text-blue-400">${productById!.price}</h3>
-              <Button className="bg-violet-500 hover:bg-violet-600 min-w-40">
-                Agregar
-                <span className="ml-4">
-                  <ShoppingCart className="" />
-                </span>
-              </Button>
+              <div className="w-full max-w-56 cursor-pointer" >
+                <ButtonAddCart product={productById!} />
+              </div>
             </div>
           </div>
         </div>
