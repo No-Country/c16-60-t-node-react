@@ -12,9 +12,10 @@ const Navbar = () => {
 
         <div className="flex items-center gap-x-3">
           <div className="md:flex flex-row gap-1 hidden">
-            {NAV_LINKS_PRIVATE.map(({ href, key, icon: Icon }) => (
+            {NAV_LINKS_PRIVATE.map(({ href, key, label, icon: Icon }) => (
               <NavItem key={key} href={href}>
-                <Icon className="w-6 h-6" />
+                <Icon className="w-6 h-6 mr-2" />
+                {label}
               </NavItem>
             ))}
           </div>

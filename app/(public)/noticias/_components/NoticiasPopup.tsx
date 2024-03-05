@@ -21,7 +21,7 @@ export const NoticiasPopup = (noticia: NoticiaData) => {
       <DialogTrigger asChild>
         <Button variant='purple'>Leer Más</Button>
       </DialogTrigger>
-      <DialogContent className='overflow-auto h-screen sm:h-[90vh] sm:max-w-[1100px] '>
+      <DialogContent className='overflow-auto h-screen sm:h-[90vh] sm:max-w-[1100px] 2xl:h-min'>
         <DialogHeader>
           <DialogTitle className='text-left text-3xl py-5 sm:pr-6 sm:mb-2'>
             {title}
@@ -32,16 +32,18 @@ export const NoticiasPopup = (noticia: NoticiaData) => {
           <DialogDescription className='text-lg leading-relaxed font-normal w-full'>
             {description}
           </DialogDescription>
-          <div className='flex flex-col-reverse sm:flex-col'>
-            <Image
-              src={image}
-              width={"800"}
-              height={"800"}
-              alt={title}
-              className='rounded-lg'
-            />
-            <p className='text-xs text-gray-500 pb-2'>{fecha}</p>
-            <Button variant='purple' className='mt-4'>
+          <div className='flex flex-col-reverse sm:flex-col gap-3 sm:gap-0'>
+            <div className='flex flex-col gap-2'>
+              <Image
+                src={image}
+                width={"800"}
+                height={"800"}
+                alt={title}
+                className='rounded-lg'
+              />
+              <p className='text-xs text-gray-500 pb-2'>{fecha}</p>
+            </div>
+            <Button variant='purple' className='my-4'>
               <Link href='/donations'>Donar</Link>
             </Button>
           </div>
