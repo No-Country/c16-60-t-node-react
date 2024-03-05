@@ -1,13 +1,7 @@
-"use client"
+"use client";
 import Logo from "@/components/ui/Logo";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { NAV_LINKS_PRIVATE } from "@/constants";
 import { useSheetState } from "@/store/sheet-state";
 import { UserButton } from "@clerk/nextjs";
@@ -28,18 +22,15 @@ export const MobileMenu = () => {
 
   useEffect(() => {
     setIsMounted(true);
-  },[])
-
+  }, []);
 
   useEffect(() => {
     onClose();
-  },[pathname,onClose])
+  }, [pathname, onClose]);
 
-
-  if(!isMounted){
-    return null
+  if (!isMounted) {
+    return null;
   }
-
 
   return (
     <div className="md:hidden">
@@ -47,37 +38,27 @@ export const MobileMenu = () => {
         <Menu />
       </Button>
       <Sheet open={isOpen} onOpenChange={onClose}>
-        {/* <SheetTrigger asChild>
-          
-        </SheetTrigger> */}
         <SheetContent side="left">
           <SheetHeader className="flex justify-center items-center">
             <SheetTitle className="my-4">
               <Logo />
             </SheetTitle>
-            <div className='gap-4 grid py-4'>
-              <div className='flex flex-col items-start gap-4'>
             <div className="gap-4 grid py-4">
               <div className="flex flex-col items-start gap-4">
-                {NAV_LINKS_PRIVATE.map(({ href, key, label, icon: Icon }) => (
-                  <Button variant='ghost' key={key}>
-                    <Link href={href} className='flex flex-row gap-3 text-base'>
-                      <Icon color='#421c86' />
-                  <Button variant="ghost" key={key}>
-                    <Link href={href} className="flex flex-row gap-3 text-base">
-                      <Icon color="#421c86" />
-                      {label}
-                    </Link>
-                  </Button>
-                ))}
-                <Button
-                  variant='purple'
-                  className='flex flex-row gap-3 py-6 text-base'>
-                  <UserButton afterSignOutUrl='/' />
-                <Button variant="purple" className="flex flex-row gap-3 py-6 text-base">
-                  <UserButton afterSignOutUrl="/" />
-                  Usuario
-                </Button>
+                <div className="gap-4 grid py-4">
+                  <div className="flex flex-col items-start gap-4">
+                    {NAV_LINKS_PRIVATE.map(({ href, key, label, icon: Icon }) => (
+                      <Button variant="ghost" key={key}>
+                        <Link href={href} className="flex flex-row gap-3 text-base">
+                          <Icon color="#421c86" />
+                        </Link>
+                      </Button>
+                    ))}
+                    <Button variant="purple" className="flex flex-row gap-3 py-6 text-base">
+                      <UserButton afterSignOutUrl="/" />
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
           </SheetHeader>
