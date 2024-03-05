@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 const ContactoPage = () => {
   return (
     <section className='flex flex-col justify-around items-center my-20 bg-white sm:flex-row 2xl:py-32'>
-      <div className='flex flex-col justify-around w-[95%] h-[460px] pl-10 pr-4 bg-violet-700 text-white shadow-lg rounded-xl sm:w-[45%] lg:w-[40%]'> 
+      <div className='flex flex-col justify-around w-[95%] h-[460px] pl-10 pr-4 bg-violet-700 text-white shadow-lg rounded-xl sm:w-[45%] lg:w-[40%]'>
         <div>
           <h1 className='mt-0 mb-2 font-bold text-2xl'>
             Ponte en contacto con nosotros
