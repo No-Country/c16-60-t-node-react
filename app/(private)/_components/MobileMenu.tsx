@@ -1,3 +1,4 @@
+
 import {
   Sheet,
   SheetContent,
@@ -13,6 +14,7 @@ import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 
 export const MobileMenu = () => {
+
   return (
     <div className='md:hidden'>
       <Sheet>
@@ -26,11 +28,11 @@ export const MobileMenu = () => {
             <SheetTitle className='my-4'>
               <Logo />
             </SheetTitle>
-            <div className='grid gap-4 py-4'>
+            <div className='gap-4 grid py-4'>
               <div className='flex flex-col items-start gap-4'>
                 {NAV_LINKS_PRIVATE.map(({ href, key, label, icon: Icon }) => (
                   <Button variant='ghost' key={key}>
-                    <Link href={href} className='text-base flex flex-row gap-3'>
+                    <Link href={href} className='flex flex-row gap-3 text-base'>
                       <Icon color='#421c86' />
                       {label}
                     </Link>
@@ -38,7 +40,7 @@ export const MobileMenu = () => {
                 ))}
                 <Button
                   variant='purple'
-                  className='text-base flex flex-row gap-3 py-6'>
+                  className='flex flex-row gap-3 py-6 text-base'>
                   <UserButton afterSignOutUrl='/' />
                   Usuario
                 </Button>
