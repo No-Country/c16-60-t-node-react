@@ -7,6 +7,7 @@ export const ContactForm = () => {
   return (
     <div className='flex flex-col justify-center items-center my-10 py-2 w-[85%] sm:my-0 sm:w-[50%]'>
       <form className='flex flex-col justify-center gap-6 w-full sm:gap-4'>
+        {/* Cuando haya tiempo mejorar el codigo y mapearlo para una mejor visualizacion y optimizacion del codigo */}
         <div className='flex flex-col gap-6 sm:gap-4 sm:flex-row'>
           <Label htmlFor='name' className='w-full'>
             Nombre
