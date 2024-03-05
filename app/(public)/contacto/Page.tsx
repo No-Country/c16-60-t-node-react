@@ -22,7 +22,6 @@ const ContactoPage = () => {
             ¿Tienes alguna pregunta o sugerencia? ¡Nos encantaría escucharla!
           </p>
         </div>
-        {/* En caso de ser nesesario remplazar los datos ficticios por otros mas apropiados para la aplicacion */}
         <div className='flex flex-col gap-7'>
           <p className='flex flex-row font-medium text-base'>
             <Phone className='mr-5' />
@@ -39,7 +38,6 @@ const ContactoPage = () => {
             Avenida Siempreviva 742
           </p>
         </div>
-        {/* Remplazar en cazo de ser necesario los iconos si generan algun problem en la aplicacion */}
         <div className='flex felx-row gap-5'>
           <Button className='bg-[#3DC98B] rounded-[100%] w-9 h-9'>
             <Link href='SmartHelp@gmail.com'>
