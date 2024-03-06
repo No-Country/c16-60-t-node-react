@@ -2,7 +2,7 @@ import { DonationThanks } from "./_components/DonationThanks";
 
 const SuccessPage = () => {
   return (
-    <div className=' w-full flex justify-center sm:items-center sm:min-h-screen'>
+    <div className='flex justify-center sm:items-center w-full h-[calc(100vh-75px)]'>
       <DonationThanks />
     </div>
   );

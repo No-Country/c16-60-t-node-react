@@ -1,4 +1,6 @@
 "use client";
+import { CausasData } from "@/interfaces/causas";
+import { DonationsData } from "@/interfaces/donations";
 import {
   Table,
   TableBody,
@@ -8,8 +10,6 @@ import {
   TableRow,
 } from "@tremor/react";
 import { useEffect, useState } from "react";
-import { DonationsData } from "@/interfaces/donations";
-import { CausasData } from "@/interfaces/causas";
 
 export const TableDonations = ({
   data,
@@ -29,23 +29,23 @@ export const TableDonations = ({
   }
 
   return (
-    <div className='flex justify-center w-full pb-10'>
+    <div className='flex justify-center w-full'>
       <Table className='w-5/6'>
         <TableHead>
-          <TableRow className='border-b border-tremor-border dark:border-dark-tremor-border'>
+          <TableRow className='dark:border-dark-tremor-border border-tremor-border border-b'>
             <TableHeaderCell className='text-tremor-content-strong dark:text-dark-tremor-content-strong'>
               Nombre
             </TableHeaderCell>
             <TableHeaderCell className='text-tremor-content-strong dark:text-dark-tremor-content-strong'>
               Cantidad
             </TableHeaderCell>
-            <TableHeaderCell className='text-tremor-content-strong dark:text-dark-tremor-content-strong text-left '>
+            <TableHeaderCell className='text-tremor-content-strong dark:text-dark-tremor-content-strong text-left'>
               Mensaje
             </TableHeaderCell>
-            <TableHeaderCell className='text-tremor-content-strong dark:text-dark-tremor-content-strong text-right'>
+            <TableHeaderCell className='text-right text-tremor-content-strong dark:text-dark-tremor-content-strong'>
               Causa
             </TableHeaderCell>
-            <TableHeaderCell className='text-tremor-content-strong dark:text-dark-tremor-content-strong text-right'>
+            <TableHeaderCell className='text-right text-tremor-content-strong dark:text-dark-tremor-content-strong'>
               Fecha
             </TableHeaderCell>
           </TableRow>
@@ -55,12 +55,12 @@ export const TableDonations = ({
             const causaItem = causa.find((c) => c.id === item.causesId);
             return (
               <TableRow key={item.id} className='shadow-sm'>
-                <TableCell className='font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong'>
+                <TableCell className='text-tremor-content-strong dark:text-dark-tremor-content-strong font-medium'>
                   {item.title}
                 </TableCell>
                 <TableCell>$ {item.amount}</TableCell>
                 <div className='text-left overflow-auto'>
-                  <TableCell className='text-left lg:whitespace-normal lg:break-words line-clamp-2'>
+                  <TableCell className='line-clamp-2 text-left lg:break-words lg:whitespace-normal'>
                     {item.description}
                   </TableCell>
                 </div>
@@ -68,7 +68,7 @@ export const TableDonations = ({
                   {causaItem ? causaItem.title : "N/A"}
                 </TableCell>
                 <TableCell className='text-right'>
-                  {item.createdAt.toLocaleDateString()}
+                  {item.createdAt!.toLocaleDateString()}
                 </TableCell>
               </TableRow>
             );
