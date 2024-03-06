@@ -18,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="border-slate-100 bg-white shadow px-0 border-b w-full">
+    <nav className="max-md:top-0 max-md:right-0 max-md:left-0 max-md:z-50 max-md:sticky border-slate-100 bg-white shadow px-0 border-b w-full">
       <div className="flex justify-between items-start md:items-center px-3 sm:px-10 py-4 w-full">
         <Logo />
 
