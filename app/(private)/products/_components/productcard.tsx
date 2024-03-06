@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 import { RiHeart3Line } from "react-icons/ri";
-import ButtonAddCart from "../../_components/button-add-cart";
+import ButtonAddCart from "../../_components/ButtonAddCart";
 
 
 

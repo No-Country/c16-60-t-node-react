@@ -1,7 +1,7 @@
 import { getAllProducts, getProductById } from "@/actions/actions";
 
 import Image from "next/image";
-import ButtonAddCart from "../../_components/button-add-cart";
+import ButtonAddCart from "../../_components/ButtonAddCart";
 import Carrousel from "./_components/Carrousel";
 interface Props {
   params: {
