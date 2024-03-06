@@ -7,26 +7,19 @@ import { redirect } from "next/navigation";
 
 // Datos del usuario
 import { currentUser } from "@clerk/nextjs";
-export async function donate(formData: FormData) {
-  const user = await currentUser();
+import { PaymentProduct } from "@/interfaces/payment-product";
 
+export async function BuyProduct(BuyCart: PaymentProduct[]) {
+  const user = await currentUser();
   const preference = await new Preference(client).create({
     body: {
-      items: [
-        {
-          id: "donacion",
-          title: formData.get("message") as string,
-          quantity: 1,
-          unit_price: Number(formData.get("amount")),
-        },
-      ],
+      items: BuyCart,
       payer: {
         email: user?.emailAddresses[0].emailAddress,
       },
       metadata: {
         user_id: user?.id,
         user_name: user?.firstName + " " + user?.lastName,
-        causes_id: 1,
       },
       back_urls: {
         success: "http://localhost:3000/payment/success",
@@ -36,4 +29,3 @@ export async function donate(formData: FormData) {
 
   redirect(preference.sandbox_init_point!);
 }
-
