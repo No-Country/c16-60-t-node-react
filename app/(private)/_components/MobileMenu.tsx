@@ -1,10 +1,10 @@
 "use client";
 import Logo from "@/components/ui/Logo";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { NAV_LINKS_PRIVATE } from "@/constants";
 import { useSheetState } from "@/store/sheet-state";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,6 +15,9 @@ export const MobileMenu = () => {
   const onOpen = useSheetState((state) => state.onOpen);
   const onClose = useSheetState((state) => state.onClose);
   const isOpen = useSheetState((state) => state.isOpen);
+
+  const { user } = useUser();
+  console.log();
 
   //React
   const pathname = usePathname();
@@ -44,18 +47,20 @@ export const MobileMenu = () => {
               <Logo />
             </SheetTitle>
             <div className="gap-4 grid py-4">
-              <div className="flex flex-col items-start gap-4">
+              <div className="flex flex-col justify-center items-start gap-4">
                 <div className="gap-4 grid py-4">
                   <div className="flex flex-col items-start gap-4">
                     {NAV_LINKS_PRIVATE.map(({ href, key, label, icon: Icon }) => (
                       <Button variant="ghost" key={key}>
-                        <Link href={href} className="flex flex-row gap-3 text-base">
+                        <Link href={href} className="flex flex-row items-center gap-3 text-base">
                           <Icon color="#421c86" />
+                          {label}
                         </Link>
                       </Button>
                     ))}
-                    <Button variant="purple" className="flex flex-row gap-3 py-6 text-base">
+                    <Button variant="ghost" className="flex flex-row gap-3 py-6 text-base">
                       <UserButton afterSignOutUrl="/" />
+                      {user?.firstName} {user?.lastName}
                     </Button>
                   </div>
                 </div>
@@ -67,3 +72,5 @@ export const MobileMenu = () => {
     </div>
   );
 };
+
+//updated

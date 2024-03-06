@@ -81,7 +81,6 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       screens: {
-        sm: "640px",
         "3xl": "1536px",
         "4xl": "1920px",
       }

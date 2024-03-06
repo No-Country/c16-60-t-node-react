@@ -18,8 +18,7 @@ import { TbShoppingCartHeart } from "react-icons/tb";
 export const NAV_LINKS_PRIVATE = [
   { href: "/donations", key: "donations", label: "Donaciones", icon: RiHandHeartLine },
   { href: "/products", key: "products", label: "Productos", icon: RiShoppingBasketLine },
-  { href: "/donations/list", key: "list", label: "Aportes", icon: RiFileList3Line },
-  { href: "/cart", key: "cart", label: "Carrito", icon: TbShoppingCartHeart },
+  { href: "/donations/list", key: "list", label: "Aportes", icon: RiFileList3Line }
 ];
 
 // CAMP SECTION

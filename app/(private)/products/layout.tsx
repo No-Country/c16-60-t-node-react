@@ -1,13 +1,13 @@
 import Footer from "../_components/Footer";
 
 export const metadata = {
-  title: "SEO Title",
-  description: "SEO Title",
+  title: "Productos",
+  description: "Productos disponibles para ir en ayuda de las personas afectadas",
 };
 export default function ProductLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-[#FAFAFA]">
-      {children}
+      <>{children}</>
       <Footer />
     </div>
   );
