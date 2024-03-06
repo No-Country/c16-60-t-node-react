@@ -9,8 +9,8 @@ const Sidebar = () => {
   const state = useCategoryState((state: any) => state.categories);
 
   return (
-    <aside className="w-[330px] bg-white p-6 hidden xl:block  sticky top-9 bottom-0 left-0 xl:py-8 xl:px-10 rounded-lg">
-      <h3 className="text-lg lg:text-lg  font-bold text-violet-400  text-normal  mb-5">Categorías</h3>
+    <aside className="xl:block top-9 bottom-0 left-0 sticky hidden bg-white xl:px-10 xl:py-8 p-6 rounded-lg w-[330px]">
+      <h3 className="mb-5 font-bold text-lg text-normal text-violet-400 lg:text-lg">Categorías</h3>
       <ul className="space-y-2">
         {CategoryDat.map((cat) => (
           <CategoryItem key={cat.id} cat={cat} state={state} addOrRemoveCategory={addOrRemoveCategory} />

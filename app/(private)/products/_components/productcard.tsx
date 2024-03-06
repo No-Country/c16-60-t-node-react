@@ -41,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {name}
         </h2>
       </div>
-      <ButtonAddCart product={product} />
+      <ButtonAddCart product={product} disabled={quantity === 0} />
     </div>
   );
 };

@@ -19,7 +19,7 @@ const ProductList = ({ products }: { products: ProductsData[] }) => {
   }, [state, products]);
 
   return (
-    <div className="gap-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <div className="gap-3 3xl:gap-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5">
       {productState.map((product) => (
         <div key={product.id}>
           <Link href={`/product/${product.id}`}>

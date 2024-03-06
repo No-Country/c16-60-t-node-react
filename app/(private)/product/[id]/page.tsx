@@ -49,7 +49,7 @@ const ProductPage = async ({ params: { id } }: Props) => {
             <div className="flex justify-between items-center">
               <h3 className="font-semibold text-2xl text-blue-400">${productById!.price}</h3>
               <div className="w-full max-w-56 cursor-pointer" >
-                <ButtonAddCart product={productById!} />
+                <ButtonAddCart product={productById!} disabled={productById!.quantity === 0} />
               </div>
             </div>
           </div>
