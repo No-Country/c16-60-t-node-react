@@ -25,17 +25,22 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Button */}
-        <Button variant="default" className="lg:flex gap-2 bg-violet-700 hover:bg-violet-600">
-          {!userId ? (
-            <Link href={"/sign-in"} className="flex items-center gap-1">
-              <span className="text-base">Ingresar</span>
-              <Image src={"ingresar.svg"} alt="logo" width={25} height={25} />
-            </Link>
-          ) : (
-            <Link href={"/donations"}>Dashboard</Link>
-          )}
-        </Button>
+        {userId ? (
+          <Link
+            href={"/donations"}
+            className="bg-violet-700 hover:bg-violet-600 px-3 py-1.5 rounded-lg text-white"
+          >
+            Dashboard
+          </Link>
+        ) : (
+          <Link
+            href={"/sign-in"}
+            className="flex items-center gap-1 bg-violet-700 hover:bg-violet-600 px-3 py-1.5 rounded-lg text-white"
+          >
+            <span className="text-base">Ingresar</span>
+            <Image src={"ingresar.svg"} alt="logo" width={25} height={25} />
+          </Link>
+        )}
       </div>
 
       {/* Navbar Mobile */}

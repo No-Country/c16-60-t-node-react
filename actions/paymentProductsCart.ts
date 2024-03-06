@@ -22,7 +22,7 @@ export async function BuyProduct(BuyCart: PaymentProduct[]) {
         user_name: user?.firstName + " " + user?.lastName,
       },
       back_urls: {
-        success: "http://localhost:3000/payment/success",
+        success: `${process.env.PAYMENT_SUCCESS}/payment/success`,
       },
     },
   });
