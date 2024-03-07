@@ -2,7 +2,7 @@
 export const NAV_LINKS = [
   { href: "/nosotros", key: "sobre_nosotros", label: "Nosotros" },
   { href: "/noticias", key: "noticias", label: "Noticias " },
-  { href: "/contactos", key: "contactos", label: "Contactos" },
+  { href: "/contacto", key: "contacto", label: "Contacto" },
 ];
 
 // Remix icons
@@ -10,8 +10,7 @@ export const NAV_LINKS = [
 import {
   RiFileList3Line,
   RiHandHeartLine,
-  RiShoppingBasketLine,
-  RiShoppingCart2Line,
+  RiShoppingBasketLine
 } from "react-icons/ri";
 
 import { TbShoppingCartHeart } from "react-icons/tb";
@@ -19,8 +18,7 @@ import { TbShoppingCartHeart } from "react-icons/tb";
 export const NAV_LINKS_PRIVATE = [
   { href: "/donations", key: "donations", label: "Donaciones", icon: RiHandHeartLine },
   { href: "/products", key: "products", label: "Productos", icon: RiShoppingBasketLine },
-  { href: "/list", key: "list", label: "Lista de donaciones ", icon: RiFileList3Line },
-  { href: "/cart", key: "cart", label: "Carrito de compras", icon: TbShoppingCartHeart },
+  { href: "/donations/list", key: "list", label: "Aportes", icon: RiFileList3Line }
 ];
 
 // CAMP SECTION

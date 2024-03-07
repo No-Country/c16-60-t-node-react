@@ -9,7 +9,7 @@ const NavItem = ({ href, children }: Props) => {
   return (
     <Link
       href={href}
-      className="hover:bg-violet-500 p-2 rounded text-stone-600 hover:text-slate-200 transition-colors"
+      className="relative flex hover:bg-violet-500 lg:mr-1 px-3.5 py-2 rounded text-stone-600 hover:text-slate-200 transition-colors group"
     >
       {children}
     </Link>

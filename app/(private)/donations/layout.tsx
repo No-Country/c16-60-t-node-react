@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Donations Page",
+  title: "Donations",
   description: "Donaciones para las distintas causas",
 };
 export default function DonationLayout({ children }: { children: React.ReactNode }) {

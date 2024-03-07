@@ -16,7 +16,7 @@ export const products: ProductsData[] = [
 
   {
     id: 3,
-    image: "	https://http2.mlstatic.com/D_NQ_NP_969724-MLA74245733727_012024-O.webp",
+    image: "https://http2.mlstatic.com/D_NQ_NP_969724-MLA74245733727_012024-O.webp",
     name: "Detergente Finish para baños 30 Capsulas",
     category: Category.PRODUCTOS_LIMPIEZA,
     price: 98,

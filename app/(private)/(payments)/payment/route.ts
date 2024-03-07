@@ -14,6 +14,7 @@ export async function POST(request: NextRequest) {
     userId: payment.metadata.user_id!,
     causesId: payment.metadata.causes_id!,
   };
-  createDonation({ donation });
+  console.log(donation);
+  await createDonation({ donation });
   return Response.json({ sucess: true });
 }

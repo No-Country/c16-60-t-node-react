@@ -29,10 +29,11 @@ export async function donate(formData: FormData) {
         causes_id: 1,
       },
       back_urls: {
-        success: "http://localhost:3000/payment/success",
+        success: `${process.env.PAYMENT_SUCCESS}/payment/success`,
       },
     },
   });
 
   redirect(preference.sandbox_init_point!);
 }
+

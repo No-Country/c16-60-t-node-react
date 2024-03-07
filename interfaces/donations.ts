@@ -3,7 +3,7 @@ export interface DonationsData {
   amount: number;
   title: string;
   description: string;
-  createdAt?: Date;
+  createdAt?: Date | null;
   causesId: number;
   userId: string;
 }

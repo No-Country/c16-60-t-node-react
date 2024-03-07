@@ -1,41 +1,46 @@
+import Logo from "@/components/ui/Logo";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "@/constants";
 import { auth } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/components/ui/Logo";
 import { MobileMenu } from "../mobile/MobileMenu";
 
 const Navbar = () => {
   const { userId } = auth();
 
   return (
-    <nav className="flex items-center  justify-between max-w-screen-xl mx-auto px-3 pt-7 ">
+    <nav className="flex justify-between items-center mx-auto px-3 pt-7 max-w-screen-xl">
       {/* Logo */}
       <Logo />
 
       {/* Usuario no logeado */}
-      <div className=" hidden lg:flex items-center gap-4 ">
+      <div className="lg:flex items-center gap-4 hidden">
         {/*Links*/}
-        <ul className="space-x-4 lg:flex items-end">
+        <ul className="lg:flex items-end space-x-4">
           {NAV_LINKS.map(({ href, key, label }) => (
-            <Link href={href} key={key} className="hover:text-violet-500 transition-all text-base">
+            <Link href={href} key={key} className="text-base hover:text-violet-500 transition-all">
               {label}
             </Link>
           ))}
         </ul>
 
-        {/* Button */}
-        <Button variant="default" className="lg:flex gap-2 bg-violet-700 hover:bg-violet-600">
-          {!userId ? (
-            <Link href={"/sign-in"} className="flex items-center gap-1">
-              <span className="text-base">Ingresar</span>
-              <Image src={"ingresar.svg"} alt="logo" width={25} height={25} />
-            </Link>
-          ) : (
-            <Link href={"/donations"}>Dashboard</Link>
-          )}
-        </Button>
+        {userId ? (
+          <Link
+            href={"/donations"}
+            className="bg-violet-700 hover:bg-violet-600 px-3 py-1.5 rounded-lg text-white"
+          >
+            Dashboard
+          </Link>
+        ) : (
+          <Link
+            href={"/sign-in"}
+            className="flex items-center gap-1 bg-violet-700 hover:bg-violet-600 px-3 py-1.5 rounded-lg text-white"
+          >
+            <span className="text-base">Ingresar</span>
+            <Image src={"ingresar.svg"} alt="logo" width={25} height={25} />
+          </Link>
+        )}
       </div>
 
       {/* Navbar Mobile */}
