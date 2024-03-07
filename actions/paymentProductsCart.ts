@@ -6,8 +6,8 @@ import { Preference } from "mercadopago";
 import { redirect } from "next/navigation";
 
 // Datos del usuario
-import { currentUser } from "@clerk/nextjs";
 import { PaymentProduct } from "@/interfaces/payment-product";
+import { currentUser } from "@clerk/nextjs";
 
 export async function BuyProduct(BuyCart: PaymentProduct[]) {
   const user = await currentUser();
@@ -20,6 +20,7 @@ export async function BuyProduct(BuyCart: PaymentProduct[]) {
       metadata: {
         user_id: user?.id,
         user_name: user?.firstName + " " + user?.lastName,
+        causes_id: 1,
       },
       back_urls: {
         success: `${process.env.PAYMENT_SUCCESS}/payment/success`,
