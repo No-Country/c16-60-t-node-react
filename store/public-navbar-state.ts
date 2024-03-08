@@ -1,12 +1,12 @@
 import { create } from "zustand";
 
-interface isFilterState {
+interface StateMobileSheet {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
 }
 
-export const useFilterState = create<isFilterState>((set, get) => ({
+export const useSheetNavbarPublic = create<StateMobileSheet>((set, get) => ({
   isOpen: false,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),

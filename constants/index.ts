@@ -1,6 +1,6 @@
 // NAVIGATION
 export const NAV_LINKS = [
-  { href: "/nosotros", key: "sobre_nosotros", label: "Nosotros" },
+  { href: "/nosotros", key: "sobre_nosotros", label: "Sobre nosotros" },
   { href: "/noticias", key: "noticias", label: "Noticias " },
   { href: "/contacto", key: "contacto", label: "Contacto" },
 ];
@@ -58,7 +58,6 @@ export const FEATURES = [
 
 // FOOTER SECTION
 export const FOOTER_LINKS = [
-  { title: "Copyright", url: "/copyright" },
   { title: "Politica de privacidad", url: "/politica" },
   { title: "Contacto", url: "/contacto" },
 ];

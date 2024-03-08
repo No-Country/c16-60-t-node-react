@@ -30,7 +30,7 @@ const Navbar = () => {
             href={"/donations"}
             className="bg-violet-700 hover:bg-violet-600 px-3 py-1.5 rounded-lg text-white"
           >
-            Dashboard
+            Donar
           </Link>
         ) : (
           <Link

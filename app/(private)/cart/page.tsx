@@ -9,12 +9,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import DataPayment from "./_components/data-payment";
 import ListProductInCart from "./_components/list-product-cart";
+import { useCartClean } from "@/store/clear-cart-after-checkout";
 
 const CartPage = () => {
-
   const [loading, setLoading] = useState<boolean>(false);
   const CartProducts = useCartStore((state) => state.cart);
   const TotalItems = useCartStore((state) => state.getTotalItems());
+  const clearCartAfterCheckout = useCartClean((state) => state.clearCartAfterCheckout);
   const TotalPrice = useCartStore((state) => state.TotalPriceProducts());
   const valorEnvio = Math.round(TotalPrice * 0.5);
   const ProductsPayment: PaymentProduct[] = CartProducts.map((product) => ({
@@ -38,24 +39,27 @@ const CartPage = () => {
     ]);
   };
 
+  const handleClearCart = () => {
+    clearCartAfterCheckout();
+  };
 
   useEffect(() => {
     setLoading(true);
-  },[])
+  }, []);
 
   if (!loading) {
     return null;
   }
 
   return (
-    <main className="flex lg:flex-row flex-col justify-center items-stretch lg:items-start gap-5 mx-auto px-5 lg:px-0 py-5 lg:pt-16 lg:pb-10 w-full lg:max-w-screen-xl h-auto lg:h-[calc(100vh-75px)]">
+    <main className="flex lg:flex-row flex-col justify-center items-stretch lg:items-start gap-5 mx-auto max-md:mt-[75px] px-5 lg:px-0 py-5 lg:pt-16 lg:pb-10 w-full lg:max-w-screen-xl h-auto lg:h-[calc(100vh-75px)]">
       <section className="flex-1">
         <Link href={"/products"} className="font-medium text-base underline">
           Continuar Comprando
         </Link>
         <h2 className="my-2 font-semibold text-gray-800 text-xl lg:text-3xl">My Carrito de compras</h2>
         <span className="font-base text-gray-600">Tienes {TotalItems} productos en tu carrito</span>
-        <div className="w-full h-auto max-h-[400px]">
+        <div className="px-8 w-full h-auto max-h-[400px] overflow-x-hidden overflow-y-auto scrollbar">
           <ListProductInCart />
         </div>
       </section>
@@ -73,7 +77,12 @@ const CartPage = () => {
         >
           <Link href={"/products"}>Continuar Comprando</Link>
         </Button>
-        <Button type="submit" variant="default" className="bg-emerald-400 hover:bg-emerald-500 w-full">
+        <Button
+          onClick={handleClearCart}
+          type="submit"
+          variant="default"
+          className="bg-emerald-400 hover:bg-emerald-500 w-full"
+        >
           Continuar con el pago
         </Button>
 
