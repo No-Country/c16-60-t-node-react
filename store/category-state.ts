@@ -17,4 +17,7 @@ export const useCategoryState = create((set, get) => ({
       }
       return { categories: newCategories };
     }),
+
+  clearCategories: () => set({ categories: [] }),
+
 }));
