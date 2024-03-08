@@ -42,7 +42,7 @@ export const MobileMenu = () => {
 
   return (
     <div className="md:hidden">
-      <Button variant="ghost" onClick={onOpen}>
+      <Button variant="ghost" onClick={onOpen} className="p-0" >
         <Menu />
       </Button>
       <Sheet open={isOpen} onOpenChange={onClose}>
