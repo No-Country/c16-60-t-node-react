@@ -22,7 +22,7 @@ export const CategoryDat: CategoryData[] = [
   {
     id: 1,
     name: Category.ALLITEMS,
-    icon: "/icons/AllFilter.png",
+    icon: "/icons/allFilter.png",
   },
   {
     id: 2,
