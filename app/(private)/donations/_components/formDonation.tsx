@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { CausasData } from "@/interfaces/causas";
 import Image from "next/image";
 
 export const FormDonation = async () => {
@@ -11,14 +12,14 @@ export const FormDonation = async () => {
   return (
     <div className="flex flex-col w-4/5">
       <form action={donate} className="flex flex-col justify-center gap-4">
-        <Select>
+        <Select name="causes_id">
           <SelectTrigger className="shadow-sm rounded-md font-normal text-base text-gray-500">
             <SelectValue placeholder="Causa a la que donar" />
           </SelectTrigger>
           <SelectContent>
-            {causas.map(({ title}:{title:string}) => (
-              <SelectItem key={title} value={title}>
-                {title}
+            {causas.map((causa: CausasData) => (
+              <SelectItem key={causa.id} value={`${causa.id}`}>
+                {causa.title}
               </SelectItem>
             ))}
           </SelectContent>

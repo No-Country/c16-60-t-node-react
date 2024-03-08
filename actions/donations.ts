@@ -10,6 +10,8 @@ import { currentUser } from "@clerk/nextjs";
 export async function donate(formData: FormData) {
   const user = await currentUser();
 
+  console.log(formData.get("causes_id"));
+
   const preference = await new Preference(client).create({
     body: {
       items: [
@@ -26,7 +28,7 @@ export async function donate(formData: FormData) {
       metadata: {
         user_id: user?.id,
         user_name: user?.firstName + " " + user?.lastName,
-        causes_id: 1,
+        causes_id: formData.get("causes_id") as string,
       },
       back_urls: {
         success: `${process.env.PAYMENT_SUCCESS}/payment/success`,
