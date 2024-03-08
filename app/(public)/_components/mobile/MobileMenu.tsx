@@ -1,55 +1,54 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
-import { NAV_LINKS } from "@/constants";
+"use client";
 import Logo from "@/components/ui/Logo";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { NAV_LINKS } from "@/constants";
+import { useSheetNavbarPublic } from "@/store/public-navbar-state";
+import { useAuth } from "@clerk/nextjs";
+import { Menu } from "lucide-react";
 import Image from "next/image";
-import { auth } from "@clerk/nextjs";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 export const MobileMenu = () => {
-  const { userId } = auth();
+  const { userId } = useAuth();
+  const isOpen = useSheetNavbarPublic((state) => state.isOpen);
+  const onOpen = useSheetNavbarPublic((state) => state.onOpen);
+  const onClose = useSheetNavbarPublic((state) => state.onClose);
+
+  const path = usePathname();
+
+  useEffect(() => {
+    onClose();
+  }, [path, onClose]);
 
   return (
-    <div className='lg:hidden'>
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant='ghost'>
-            <Menu className='w-14' />
-          </Button>
-        </SheetTrigger>
-        <SheetContent side='left'>
-          <SheetHeader className='flex justify-center items-center'>
-            <SheetTitle className='my-4'>
+    <div className="lg:hidden">
+      <Button variant="ghost" onClick={onOpen}>
+        <Menu className="w-14" />
+      </Button>
+      <Sheet open={isOpen} onOpenChange={onClose}>
+        <SheetTrigger asChild></SheetTrigger>
+        <SheetContent side="left">
+          <SheetHeader className="flex justify-center items-center">
+            <SheetTitle className="my-4">
               <Logo />
             </SheetTitle>
-            <div className='grid gap-4 py-4'>
-              <div className='flex flex-col items-center gap-4'>
+            <div className="gap-4 grid py-4">
+              <div className="flex flex-col items-center gap-4">
                 {NAV_LINKS.map(({ href, key, label }) => (
-                  <Button variant='ghost' key={key}>
-                    <Link
-                      href={href}
-                      className='hover:text-violet-500 transition-all text-base'>
+                  <Button variant="ghost" key={key}>
+                    <Link href={href} className="text-base hover:text-violet-500 transition-all">
                       {label}
                     </Link>
                   </Button>
                 ))}
-                <Button variant='purple' className='lg:flex gap-2'>
+                <Button variant="purple" className="lg:flex gap-2">
                   {!userId ? (
-                    <Link href={"/sign-in"} className='flex items-center gap-1'>
-                      <span className='text-base'>Ingresar</span>
-                      <Image
-                        src={"ingresar.svg"}
-                        alt='logo'
-                        width={25}
-                        height={25}
-                      />
+                    <Link href={"/sign-in"} className="flex items-center gap-1">
+                      <span className="text-base">Ingresar</span>
+                      <Image src={"ingresar.svg"} alt="logo" width={25} height={25} />
                     </Link>
                   ) : (
                     <Link href={"/donations"}>Donar</Link>

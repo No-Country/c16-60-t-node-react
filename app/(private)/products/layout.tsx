@@ -6,7 +6,7 @@ export const metadata = {
 };
 export default function ProductLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-[#FAFAFA]">
+    <div className="bg-[#FAFAFA] max-md:mt-[74px]">
       <>{children}</>
       <Footer />
     </div>

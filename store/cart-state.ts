@@ -8,6 +8,7 @@ interface State {
   addProductToCart: (product: CartProduct) => void;
   addOrRemoveQuantity: (id: number, quantity: number) => void;
   TotalPriceProducts: () => number;
+  ClearCart: () => void;
 }
 
 export const useCartStore = create<State>()(
@@ -66,7 +67,12 @@ export const useCartStore = create<State>()(
       TotalPriceProducts: () => {
         const { cart } = get();
         return cart.reduce((total, item) => total + item.price * item.quantity, 0)
+      },
+
+      ClearCart: () => {
+        set({ cart: [] });
       }
+
     }),
 
     {
