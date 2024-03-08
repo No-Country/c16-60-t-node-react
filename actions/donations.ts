@@ -28,7 +28,7 @@ export async function donate(formData: FormData) {
       metadata: {
         user_id: user?.id,
         user_name: user?.firstName + " " + user?.lastName,
-        causes_id: formData.get("causes_id") as string,
+        causes_id: Number(formData.get("causes_id")) as number,
       },
       back_urls: {
         success: `${process.env.PAYMENT_SUCCESS}/payment/success`,
