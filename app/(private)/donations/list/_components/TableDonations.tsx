@@ -29,7 +29,7 @@ export const TableDonations = ({
   }
 
   return (
-    <div className="flex justify-center w-full max-h-[450px] overflow-y-auto scrollbar">
+    <div className="flex justify-center w-full max-h-[350px] 3xl:max-h-[450px] overflow-y-auto scrollbar">
       <Table className="w-5/6 scrollbar">
         <TableHead>
           <TableRow className="dark:border-dark-tremor-border border-tremor-border border-b">
